@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace System_Forming_Techical_Specification
 {
-    public partial class Authorization_Window : Form
+    public partial class Error_Authorization_Window : Form
     {
-        public Authorization_Window()
+        public Error_Authorization_Window()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Text_Password_Click(object sender, EventArgs e)
+        private void Text_Log_Pass_Click(object sender, EventArgs e)
         {
 
         }

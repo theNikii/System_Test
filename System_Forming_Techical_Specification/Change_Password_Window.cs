@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace System_Forming_Techical_Specification
 {
-    public partial class Authorization_Window : Form
+    public partial class Change_Password_Window : Form
     {
-        public Authorization_Window()
+        public Change_Password_Window()
         {
             InitializeComponent();
+        }
+
+        private void Text_Log_Pass_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -23,6 +28,16 @@ namespace System_Forming_Techical_Specification
         }
 
         private void Text_Password_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

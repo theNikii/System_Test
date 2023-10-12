@@ -52,6 +52,18 @@
     <Compile Include="Authorization_Window.Designer.cs">
       <DependentUpon>Authorization_Window.cs</DependentUpon>
     </Compile>
+    <Compile Include="Change_Password_Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Change_Password_Window.Designer.cs">
+      <DependentUpon>Change_Password_Window.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Error_Authorization_Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Error_Authorization_Window.Designer.cs">
+      <DependentUpon>Error_Authorization_Window.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main_Windows.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +74,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Authorization_Window.resx">
       <DependentUpon>Authorization_Window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Change_Password_Window.resx">
+      <DependentUpon>Change_Password_Window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Error_Authorization_Window.resx">
+      <DependentUpon>Error_Authorization_Window.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Windows.resx">
       <DependentUpon>Main_Windows.cs</DependentUpon>
