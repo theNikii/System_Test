@@ -39,12 +39,12 @@
             this.Searh_Button = new System.Windows.Forms.Button();
             this.Text_OKPD2 = new System.Windows.Forms.Label();
             this.Text_KTRY = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Window_OKPD2 = new System.Windows.Forms.DataGridView();
+            this.Window_KTRY = new System.Windows.Forms.DataGridView();
             this.Clean_Item_String_Button = new System.Windows.Forms.Button();
             this.Go_To_Item_Button = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Window_OKPD2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Window_KTRY)).BeginInit();
             this.SuspendLayout();
             // 
             // Pc_Window
@@ -173,25 +173,25 @@
             this.Text_KTRY.TabIndex = 10;
             this.Text_KTRY.Text = "КТРУ:";
             // 
-            // dataGridView1
+            // Window_OKPD2
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(219, 210);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(515, 434);
-            this.dataGridView1.TabIndex = 11;
+            this.Window_OKPD2.AllowUserToOrderColumns = true;
+            this.Window_OKPD2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Window_OKPD2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Window_OKPD2.Location = new System.Drawing.Point(219, 210);
+            this.Window_OKPD2.Name = "Window_OKPD2";
+            this.Window_OKPD2.Size = new System.Drawing.Size(515, 434);
+            this.Window_OKPD2.TabIndex = 11;
             // 
-            // dataGridView2
+            // Window_KTRY
             // 
-            this.dataGridView2.AllowUserToOrderColumns = true;
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(813, 210);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(629, 434);
-            this.dataGridView2.TabIndex = 12;
+            this.Window_KTRY.AllowUserToOrderColumns = true;
+            this.Window_KTRY.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Window_KTRY.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Window_KTRY.Location = new System.Drawing.Point(813, 210);
+            this.Window_KTRY.Name = "Window_KTRY";
+            this.Window_KTRY.Size = new System.Drawing.Size(629, 434);
+            this.Window_KTRY.TabIndex = 12;
             // 
             // Clean_Item_String_Button
             // 
@@ -227,8 +227,8 @@
             this.ClientSize = new System.Drawing.Size(1484, 761);
             this.Controls.Add(this.Go_To_Item_Button);
             this.Controls.Add(this.Clean_Item_String_Button);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Window_KTRY);
+            this.Controls.Add(this.Window_OKPD2);
             this.Controls.Add(this.Text_KTRY);
             this.Controls.Add(this.Text_OKPD2);
             this.Controls.Add(this.Searh_Button);
@@ -245,8 +245,8 @@
             this.Name = "Main_Windows";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Main_Windows_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Window_OKPD2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Window_KTRY)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,8 +265,8 @@
         private System.Windows.Forms.Button Searh_Button;
         private System.Windows.Forms.Label Text_OKPD2;
         private System.Windows.Forms.Label Text_KTRY;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView Window_OKPD2;
+        private System.Windows.Forms.DataGridView Window_KTRY;
         private System.Windows.Forms.Button Clean_Item_String_Button;
         private System.Windows.Forms.Button Go_To_Item_Button;
     }
