@@ -161,7 +161,10 @@
             this.Controls.Add(this.Repeat_New_Password_Button);
             this.Controls.Add(this.Text_Example_Password);
             this.Controls.Add(this.Text_Pass_Need);
+            this.MaximumSize = new System.Drawing.Size(600, 500);
+            this.MinimumSize = new System.Drawing.Size(600, 500);
             this.Name = "Change_Password_Window";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 

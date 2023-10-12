@@ -124,7 +124,10 @@
             this.Controls.Add(this.Password_String);
             this.Controls.Add(this.Login_String);
             this.Controls.Add(this.Text_Log_Pass);
+            this.MaximumSize = new System.Drawing.Size(600, 500);
+            this.MinimumSize = new System.Drawing.Size(600, 500);
             this.Name = "Authorization_Window";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 

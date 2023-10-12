@@ -21,5 +21,10 @@ namespace System_Forming_Techical_Specification
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
