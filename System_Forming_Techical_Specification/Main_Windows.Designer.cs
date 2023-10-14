@@ -43,6 +43,7 @@
             this.Window_KTRY = new System.Windows.Forms.DataGridView();
             this.Clean_Item_String_Button = new System.Windows.Forms.Button();
             this.Go_To_Item_Button = new System.Windows.Forms.Button();
+            this.Search_System_Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Window_OKPD2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Window_KTRY)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +56,7 @@
             this.Pc_Window.Name = "Pc_Window";
             this.Pc_Window.Size = new System.Drawing.Size(167, 194);
             this.Pc_Window.TabIndex = 0;
+            this.Pc_Window.TextChanged += new System.EventHandler(this.Pc_Window_TextChanged);
             // 
             // Personal_Cabinet
             // 
@@ -68,6 +70,7 @@
             this.Personal_Cabinet.TabIndex = 1;
             this.Personal_Cabinet.Text = "Личный кабинет";
             this.Personal_Cabinet.UseVisualStyleBackColor = false;
+            this.Personal_Cabinet.Click += new System.EventHandler(this.Personal_Cabinet_Click);
             // 
             // Info_System_Button
             // 
@@ -75,12 +78,13 @@
             this.Info_System_Button.FlatAppearance.BorderSize = 2;
             this.Info_System_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Info_System_Button.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Info_System_Button.Location = new System.Drawing.Point(0, 286);
+            this.Info_System_Button.Location = new System.Drawing.Point(1, 319);
             this.Info_System_Button.Name = "Info_System_Button";
             this.Info_System_Button.Size = new System.Drawing.Size(166, 40);
             this.Info_System_Button.TabIndex = 2;
             this.Info_System_Button.Text = "Справочная система";
             this.Info_System_Button.UseVisualStyleBackColor = false;
+            this.Info_System_Button.Click += new System.EventHandler(this.Info_System_Button_Click);
             // 
             // Techi_Task_Button
             // 
@@ -88,12 +92,13 @@
             this.Techi_Task_Button.FlatAppearance.BorderSize = 2;
             this.Techi_Task_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Techi_Task_Button.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Techi_Task_Button.Location = new System.Drawing.Point(0, 348);
+            this.Techi_Task_Button.Location = new System.Drawing.Point(0, 365);
             this.Techi_Task_Button.Name = "Techi_Task_Button";
             this.Techi_Task_Button.Size = new System.Drawing.Size(166, 40);
             this.Techi_Task_Button.TabIndex = 3;
             this.Techi_Task_Button.Text = "Техническое задание";
             this.Techi_Task_Button.UseVisualStyleBackColor = false;
+            this.Techi_Task_Button.Click += new System.EventHandler(this.Techi_Task_Button_Click);
             // 
             // Forming_Document_Button
             // 
@@ -101,12 +106,13 @@
             this.Forming_Document_Button.FlatAppearance.BorderSize = 2;
             this.Forming_Document_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Forming_Document_Button.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Forming_Document_Button.Location = new System.Drawing.Point(0, 410);
+            this.Forming_Document_Button.Location = new System.Drawing.Point(0, 411);
             this.Forming_Document_Button.Name = "Forming_Document_Button";
             this.Forming_Document_Button.Size = new System.Drawing.Size(166, 40);
             this.Forming_Document_Button.TabIndex = 4;
             this.Forming_Document_Button.Text = "Формирование документа";
             this.Forming_Document_Button.UseVisualStyleBackColor = false;
+            this.Forming_Document_Button.Click += new System.EventHandler(this.Forming_Document_Button_Click);
             // 
             // Main_Window_Info
             // 
@@ -115,6 +121,7 @@
             this.Main_Window_Info.Name = "Main_Window_Info";
             this.Main_Window_Info.Size = new System.Drawing.Size(1286, 761);
             this.Main_Window_Info.TabIndex = 5;
+            this.Main_Window_Info.TextChanged += new System.EventHandler(this.Main_Window_Info_TextChanged);
             // 
             // Text_Search_Item
             // 
@@ -126,6 +133,7 @@
             this.Text_Search_Item.Size = new System.Drawing.Size(212, 22);
             this.Text_Search_Item.TabIndex = 6;
             this.Text_Search_Item.Text = "Поиск нуменкулатуры:";
+            this.Text_Search_Item.Click += new System.EventHandler(this.Text_Search_Item_Click);
             // 
             // Search_Item_String
             // 
@@ -136,6 +144,7 @@
             this.Search_Item_String.Name = "Search_Item_String";
             this.Search_Item_String.Size = new System.Drawing.Size(685, 38);
             this.Search_Item_String.TabIndex = 7;
+            this.Search_Item_String.TextChanged += new System.EventHandler(this.Search_Item_String_TextChanged);
             // 
             // Searh_Button
             // 
@@ -149,6 +158,7 @@
             this.Searh_Button.TabIndex = 8;
             this.Searh_Button.Text = "Поиск";
             this.Searh_Button.UseVisualStyleBackColor = false;
+            this.Searh_Button.Click += new System.EventHandler(this.Searh_Button_Click);
             // 
             // Text_OKPD2
             // 
@@ -172,6 +182,7 @@
             this.Text_KTRY.Size = new System.Drawing.Size(67, 22);
             this.Text_KTRY.TabIndex = 10;
             this.Text_KTRY.Text = "КТРУ:";
+            this.Text_KTRY.Click += new System.EventHandler(this.Text_KTRY_Click);
             // 
             // Window_OKPD2
             // 
@@ -182,6 +193,7 @@
             this.Window_OKPD2.Name = "Window_OKPD2";
             this.Window_OKPD2.Size = new System.Drawing.Size(515, 434);
             this.Window_OKPD2.TabIndex = 11;
+            this.Window_OKPD2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Window_OKPD2_CellContentClick);
             // 
             // Window_KTRY
             // 
@@ -192,6 +204,7 @@
             this.Window_KTRY.Name = "Window_KTRY";
             this.Window_KTRY.Size = new System.Drawing.Size(629, 434);
             this.Window_KTRY.TabIndex = 12;
+            this.Window_KTRY.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Window_KTRY_CellContentClick);
             // 
             // Clean_Item_String_Button
             // 
@@ -205,6 +218,7 @@
             this.Clean_Item_String_Button.TabIndex = 13;
             this.Clean_Item_String_Button.Text = "Очистить";
             this.Clean_Item_String_Button.UseVisualStyleBackColor = false;
+            this.Clean_Item_String_Button.Click += new System.EventHandler(this.Clean_Item_String_Button_Click);
             // 
             // Go_To_Item_Button
             // 
@@ -219,12 +233,27 @@
             this.Go_To_Item_Button.Text = "Перейти к нуменкулатуре";
             this.Go_To_Item_Button.UseVisualStyleBackColor = false;
             // 
+            // Search_System_Button
+            // 
+            this.Search_System_Button.BackColor = System.Drawing.SystemColors.Control;
+            this.Search_System_Button.FlatAppearance.BorderSize = 2;
+            this.Search_System_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Search_System_Button.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Search_System_Button.Location = new System.Drawing.Point(2, 273);
+            this.Search_System_Button.Name = "Search_System_Button";
+            this.Search_System_Button.Size = new System.Drawing.Size(166, 40);
+            this.Search_System_Button.TabIndex = 15;
+            this.Search_System_Button.Text = "Поиск";
+            this.Search_System_Button.UseVisualStyleBackColor = false;
+            this.Search_System_Button.Click += new System.EventHandler(this.Search_System_Button_Click);
+            // 
             // Main_Windows
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1484, 761);
+            this.Controls.Add(this.Search_System_Button);
             this.Controls.Add(this.Go_To_Item_Button);
             this.Controls.Add(this.Clean_Item_String_Button);
             this.Controls.Add(this.Window_KTRY);
@@ -269,6 +298,7 @@
         private System.Windows.Forms.DataGridView Window_KTRY;
         private System.Windows.Forms.Button Clean_Item_String_Button;
         private System.Windows.Forms.Button Go_To_Item_Button;
+        private System.Windows.Forms.Button Search_System_Button;
     }
 }
 

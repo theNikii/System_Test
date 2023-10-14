@@ -97,6 +97,7 @@
             this.Enter_To_System_Button.TabIndex = 11;
             this.Enter_To_System_Button.Text = "Войти ";
             this.Enter_To_System_Button.UseVisualStyleBackColor = false;
+            this.Enter_To_System_Button.Click += new System.EventHandler(this.Enter_To_System_Button_Click);
             // 
             // Forget_Password_Button
             // 

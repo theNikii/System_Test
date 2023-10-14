@@ -10,21 +10,21 @@ using System.Windows.Forms;
 
 namespace System_Forming_Techical_Specification
 {
-    public partial class Error_Authorization_Window : Form
+    public partial class Edit_Document : Form
     {
-        public Error_Authorization_Window()
+        public Edit_Document()
         {
             InitializeComponent();
         }
 
-        private void Text_Log_Pass_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void Enter_To_System_Button_Click(object sender, EventArgs e)
+        private void End_Edit_Button_Click(object sender, EventArgs e)
         {
-            Personal_Cabinet_Window f1 = new Personal_Cabinet_Window();
+            Document_Window f1 = new Document_Window();
             f1.ShowDialog();
             this.Close();
         }

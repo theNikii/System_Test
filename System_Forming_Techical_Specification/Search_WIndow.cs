@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace System_Forming_Techical_Specification
 {
-    public partial class Technical_Specification_Window : Form
+    public partial class Search_WIndow : Form
     {
-        public Technical_Specification_Window()
+        public Search_WIndow()
         {
             InitializeComponent();
-        }
-
-        private void Top_String_Text_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Info_Line_Charistic_Text_Click(object sender, EventArgs e)
-        {
-           
         }
 
         private void Personal_Cabinet_Click(object sender, EventArgs e)
@@ -32,7 +22,13 @@ namespace System_Forming_Techical_Specification
             Personal_Cabinet_Window f1 = new Personal_Cabinet_Window();
             f1.ShowDialog();
             this.Close();
+        }
 
+        private void Search_System_Button_Click(object sender, EventArgs e)
+        {
+            Search_WIndow f1 = new Search_WIndow();
+            f1.ShowDialog();
+            this.Close();
         }
 
         private void Info_System_Button_Click(object sender, EventArgs e)
@@ -56,23 +52,9 @@ namespace System_Forming_Techical_Specification
             this.Close();
         }
 
-        private void Search_System_Button_Click(object sender, EventArgs e)
+        private void Go_To_Item_Button_Click(object sender, EventArgs e)
         {
-            Search_WIndow f1 = new Search_WIndow();
-            f1.ShowDialog();
-            this.Close();
-        }
-
-        private void Change_Technical_Specification_Button_Click(object sender, EventArgs e)
-        {
-            Edit_Technical_Specification f1 = new Edit_Technical_Specification();
-            f1.ShowDialog();
-            this.Close();
-        }
-
-        private void Send_Info_To_Document_Click(object sender, EventArgs e)
-        {
-            Edit_Document f1 = new Edit_Document();
+            Item_Window f1 = new Item_Window();
             f1.ShowDialog();
             this.Close();
         }

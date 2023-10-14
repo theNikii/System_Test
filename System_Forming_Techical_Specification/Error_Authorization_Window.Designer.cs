@@ -72,6 +72,7 @@
             resources.ApplyResources(this.Enter_To_System_Button, "Enter_To_System_Button");
             this.Enter_To_System_Button.Name = "Enter_To_System_Button";
             this.Enter_To_System_Button.UseVisualStyleBackColor = false;
+            this.Enter_To_System_Button.Click += new System.EventHandler(this.Enter_To_System_Button_Click);
             // 
             // Forget_Password_Button
             // 

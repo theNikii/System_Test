@@ -39,6 +39,7 @@
             this.Info_Line_Termin_Text = new System.Windows.Forms.Label();
             this.System_Info_Document_Button = new System.Windows.Forms.Button();
             this.Termin_Info_Document_Button = new System.Windows.Forms.Button();
+            this.Search_System_Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Pc_Window
@@ -62,6 +63,7 @@
             this.Personal_Cabinet.TabIndex = 2;
             this.Personal_Cabinet.Text = "Личный кабинет";
             this.Personal_Cabinet.UseVisualStyleBackColor = false;
+            this.Personal_Cabinet.Click += new System.EventHandler(this.Personal_Cabinet_Click);
             // 
             // Main_Window_Info
             // 
@@ -77,12 +79,13 @@
             this.Forming_Document_Button.FlatAppearance.BorderSize = 2;
             this.Forming_Document_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Forming_Document_Button.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Forming_Document_Button.Location = new System.Drawing.Point(2, 414);
+            this.Forming_Document_Button.Location = new System.Drawing.Point(1, 406);
             this.Forming_Document_Button.Name = "Forming_Document_Button";
             this.Forming_Document_Button.Size = new System.Drawing.Size(166, 40);
             this.Forming_Document_Button.TabIndex = 9;
             this.Forming_Document_Button.Text = "Формирование документа";
             this.Forming_Document_Button.UseVisualStyleBackColor = false;
+            this.Forming_Document_Button.Click += new System.EventHandler(this.Forming_Document_Button_Click);
             // 
             // Techi_Task_Button
             // 
@@ -90,12 +93,13 @@
             this.Techi_Task_Button.FlatAppearance.BorderSize = 2;
             this.Techi_Task_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Techi_Task_Button.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Techi_Task_Button.Location = new System.Drawing.Point(2, 352);
+            this.Techi_Task_Button.Location = new System.Drawing.Point(1, 360);
             this.Techi_Task_Button.Name = "Techi_Task_Button";
             this.Techi_Task_Button.Size = new System.Drawing.Size(166, 40);
             this.Techi_Task_Button.TabIndex = 8;
             this.Techi_Task_Button.Text = "Техническое задание";
             this.Techi_Task_Button.UseVisualStyleBackColor = false;
+            this.Techi_Task_Button.Click += new System.EventHandler(this.Techi_Task_Button_Click);
             // 
             // Info_System_Button
             // 
@@ -103,12 +107,13 @@
             this.Info_System_Button.FlatAppearance.BorderSize = 2;
             this.Info_System_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Info_System_Button.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Info_System_Button.Location = new System.Drawing.Point(2, 290);
+            this.Info_System_Button.Location = new System.Drawing.Point(2, 314);
             this.Info_System_Button.Name = "Info_System_Button";
             this.Info_System_Button.Size = new System.Drawing.Size(166, 40);
             this.Info_System_Button.TabIndex = 7;
             this.Info_System_Button.Text = "Справочный раздел";
             this.Info_System_Button.UseVisualStyleBackColor = false;
+            this.Info_System_Button.Click += new System.EventHandler(this.Info_System_Button_Click);
             // 
             // Top_String_Text
             // 
@@ -165,12 +170,27 @@
             this.Termin_Info_Document_Button.Text = "Документ";
             this.Termin_Info_Document_Button.UseVisualStyleBackColor = false;
             // 
+            // Search_System_Button
+            // 
+            this.Search_System_Button.BackColor = System.Drawing.SystemColors.Control;
+            this.Search_System_Button.FlatAppearance.BorderSize = 2;
+            this.Search_System_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Search_System_Button.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Search_System_Button.Location = new System.Drawing.Point(2, 268);
+            this.Search_System_Button.Name = "Search_System_Button";
+            this.Search_System_Button.Size = new System.Drawing.Size(166, 40);
+            this.Search_System_Button.TabIndex = 16;
+            this.Search_System_Button.Text = "Поиск";
+            this.Search_System_Button.UseVisualStyleBackColor = false;
+            this.Search_System_Button.Click += new System.EventHandler(this.Search_System_Button_Click);
+            // 
             // Info_About_System_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1484, 761);
+            this.Controls.Add(this.Search_System_Button);
             this.Controls.Add(this.Termin_Info_Document_Button);
             this.Controls.Add(this.System_Info_Document_Button);
             this.Controls.Add(this.Info_Line_Termin_Text);
@@ -186,7 +206,6 @@
             this.MinimumSize = new System.Drawing.Size(1500, 800);
             this.Name = "Info_About_System_Window";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Info_About_System_Window";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,5 +224,6 @@
         private System.Windows.Forms.Label Info_Line_Termin_Text;
         private System.Windows.Forms.Button System_Info_Document_Button;
         private System.Windows.Forms.Button Termin_Info_Document_Button;
+        private System.Windows.Forms.Button Search_System_Button;
     }
 }

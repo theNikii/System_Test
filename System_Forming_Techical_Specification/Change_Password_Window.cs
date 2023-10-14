@@ -41,5 +41,12 @@ namespace System_Forming_Techical_Specification
         {
 
         }
+
+        private void Change_Password_Button_Click(object sender, EventArgs e)
+        {
+            Personal_Cabinet_Window f1 = new Personal_Cabinet_Window();
+            f1.ShowDialog();
+            this.Close();
+        }
     }
 }

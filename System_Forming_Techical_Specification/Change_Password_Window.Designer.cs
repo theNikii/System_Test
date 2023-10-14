@@ -144,6 +144,7 @@
             this.Change_Password_Button.TabIndex = 10;
             this.Change_Password_Button.Text = "Изменить";
             this.Change_Password_Button.UseVisualStyleBackColor = false;
+            this.Change_Password_Button.Click += new System.EventHandler(this.Change_Password_Button_Click);
             // 
             // Change_Password_Window
             // 

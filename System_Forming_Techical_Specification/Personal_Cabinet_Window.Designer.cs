@@ -40,9 +40,10 @@
             this.Change_Password = new System.Windows.Forms.Button();
             this.Info_For_Enginer_Text = new System.Windows.Forms.Label();
             this.Info_For_Administrator_Text = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Reset_Password_Button = new System.Windows.Forms.Button();
+            this.Search_System_Button = new System.Windows.Forms.Button();
+            this.Change_User_Button = new System.Windows.Forms.Button();
+            this.Change_Iten_Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,6 +68,7 @@
             this.Personal_Cabinet.TabIndex = 2;
             this.Personal_Cabinet.Text = "Личный кабинет";
             this.Personal_Cabinet.UseVisualStyleBackColor = false;
+            this.Personal_Cabinet.Click += new System.EventHandler(this.Personal_Cabinet_Click);
             // 
             // Main_Window_Info
             // 
@@ -83,12 +85,13 @@
             this.Forming_Document_Button.FlatAppearance.BorderSize = 2;
             this.Forming_Document_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Forming_Document_Button.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Forming_Document_Button.Location = new System.Drawing.Point(0, 412);
+            this.Forming_Document_Button.Location = new System.Drawing.Point(-1, 405);
             this.Forming_Document_Button.Name = "Forming_Document_Button";
             this.Forming_Document_Button.Size = new System.Drawing.Size(166, 40);
             this.Forming_Document_Button.TabIndex = 9;
             this.Forming_Document_Button.Text = "Формирование документа";
             this.Forming_Document_Button.UseVisualStyleBackColor = false;
+            this.Forming_Document_Button.Click += new System.EventHandler(this.Forming_Document_Button_Click);
             // 
             // Techi_Task_Button
             // 
@@ -96,12 +99,13 @@
             this.Techi_Task_Button.FlatAppearance.BorderSize = 2;
             this.Techi_Task_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Techi_Task_Button.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Techi_Task_Button.Location = new System.Drawing.Point(0, 350);
+            this.Techi_Task_Button.Location = new System.Drawing.Point(-1, 359);
             this.Techi_Task_Button.Name = "Techi_Task_Button";
             this.Techi_Task_Button.Size = new System.Drawing.Size(166, 40);
             this.Techi_Task_Button.TabIndex = 8;
             this.Techi_Task_Button.Text = "Техническое задание";
             this.Techi_Task_Button.UseVisualStyleBackColor = false;
+            this.Techi_Task_Button.Click += new System.EventHandler(this.Techi_Task_Button_Click);
             // 
             // Info_System_Button
             // 
@@ -109,12 +113,13 @@
             this.Info_System_Button.FlatAppearance.BorderSize = 2;
             this.Info_System_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Info_System_Button.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Info_System_Button.Location = new System.Drawing.Point(0, 288);
+            this.Info_System_Button.Location = new System.Drawing.Point(-1, 313);
             this.Info_System_Button.Name = "Info_System_Button";
             this.Info_System_Button.Size = new System.Drawing.Size(166, 40);
             this.Info_System_Button.TabIndex = 7;
             this.Info_System_Button.Text = "Справочная система";
             this.Info_System_Button.UseVisualStyleBackColor = false;
+            this.Info_System_Button.Click += new System.EventHandler(this.Info_System_Button_Click);
             // 
             // Top_String_Text
             // 
@@ -147,6 +152,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1234, 219);
             this.dataGridView1.TabIndex = 12;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Change_Password
             // 
@@ -158,6 +164,7 @@
             this.Change_Password.TabIndex = 13;
             this.Change_Password.Text = "Изменить пароль";
             this.Change_Password.UseVisualStyleBackColor = false;
+            this.Change_Password.Click += new System.EventHandler(this.Change_Password_Click);
             // 
             // Info_For_Enginer_Text
             // 
@@ -182,39 +189,55 @@
             this.Info_For_Administrator_Text.TabIndex = 15;
             this.Info_For_Administrator_Text.Text = "Для администратора";
             // 
-            // button1
+            // Reset_Password_Button
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(451, 454);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 52);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Изменить пользователей";
-            this.button1.UseVisualStyleBackColor = false;
+            this.Reset_Password_Button.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Reset_Password_Button.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Reset_Password_Button.Location = new System.Drawing.Point(654, 454);
+            this.Reset_Password_Button.Name = "Reset_Password_Button";
+            this.Reset_Password_Button.Size = new System.Drawing.Size(152, 52);
+            this.Reset_Password_Button.TabIndex = 18;
+            this.Reset_Password_Button.Text = "Сбросить пароль пользователя";
+            this.Reset_Password_Button.UseVisualStyleBackColor = false;
+            this.Reset_Password_Button.Click += new System.EventHandler(this.Reset_Password_Button_Click);
             // 
-            // button2
+            // Search_System_Button
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(451, 578);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(152, 52);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Изменить номеклатуру";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Search_System_Button.BackColor = System.Drawing.SystemColors.Control;
+            this.Search_System_Button.FlatAppearance.BorderSize = 2;
+            this.Search_System_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Search_System_Button.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Search_System_Button.Location = new System.Drawing.Point(-1, 267);
+            this.Search_System_Button.Name = "Search_System_Button";
+            this.Search_System_Button.Size = new System.Drawing.Size(166, 40);
+            this.Search_System_Button.TabIndex = 19;
+            this.Search_System_Button.Text = "Поиск";
+            this.Search_System_Button.UseVisualStyleBackColor = false;
+            this.Search_System_Button.Click += new System.EventHandler(this.Search_System_Button_Click);
             // 
-            // button3
+            // Change_User_Button
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(654, 454);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(152, 52);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "Сбросить пароль пользователя";
-            this.button3.UseVisualStyleBackColor = false;
+            this.Change_User_Button.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Change_User_Button.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Change_User_Button.Location = new System.Drawing.Point(470, 454);
+            this.Change_User_Button.Name = "Change_User_Button";
+            this.Change_User_Button.Size = new System.Drawing.Size(152, 52);
+            this.Change_User_Button.TabIndex = 20;
+            this.Change_User_Button.Text = "Редактировать пользователей";
+            this.Change_User_Button.UseVisualStyleBackColor = false;
+            this.Change_User_Button.Click += new System.EventHandler(this.Change_User_Button_Click);
+            // 
+            // Change_Iten_Button
+            // 
+            this.Change_Iten_Button.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Change_Iten_Button.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Change_Iten_Button.Location = new System.Drawing.Point(470, 562);
+            this.Change_Iten_Button.Name = "Change_Iten_Button";
+            this.Change_Iten_Button.Size = new System.Drawing.Size(152, 52);
+            this.Change_Iten_Button.TabIndex = 21;
+            this.Change_Iten_Button.Text = "Редактировать нуменклатуру";
+            this.Change_Iten_Button.UseVisualStyleBackColor = false;
+            this.Change_Iten_Button.Click += new System.EventHandler(this.Change_Iten_Button_Click);
             // 
             // Personal_Cabinet_Window
             // 
@@ -222,9 +245,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1484, 761);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Change_Iten_Button);
+            this.Controls.Add(this.Change_User_Button);
+            this.Controls.Add(this.Search_System_Button);
+            this.Controls.Add(this.Reset_Password_Button);
             this.Controls.Add(this.Info_For_Administrator_Text);
             this.Controls.Add(this.Info_For_Enginer_Text);
             this.Controls.Add(this.Change_Password);
@@ -241,7 +265,6 @@
             this.MinimumSize = new System.Drawing.Size(1500, 800);
             this.Name = "Personal_Cabinet_Window";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Personal_Cabinet_Window";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -262,8 +285,9 @@
         private System.Windows.Forms.Button Change_Password;
         private System.Windows.Forms.Label Info_For_Enginer_Text;
         private System.Windows.Forms.Label Info_For_Administrator_Text;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Reset_Password_Button;
+        private System.Windows.Forms.Button Search_System_Button;
+        private System.Windows.Forms.Button Change_User_Button;
+        private System.Windows.Forms.Button Change_Iten_Button;
     }
 }

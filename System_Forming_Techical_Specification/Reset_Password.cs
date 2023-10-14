@@ -10,31 +10,25 @@ using System.Windows.Forms;
 
 namespace System_Forming_Techical_Specification
 {
-    public partial class Authorization_Window : Form
+    public partial class Reset_Password : Form
     {
-        public Authorization_Window()
+        public Reset_Password()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Text_Password_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Enter_To_System_Button_Click(object sender, EventArgs e)
+        private void End_Reset_Button_Click(object sender, EventArgs e)
         {
             Personal_Cabinet_Window f1 = new Personal_Cabinet_Window();
             f1.ShowDialog();
             this.Close();
+        }
 
-            //Error_Authorization_Windows f1 = new Error_Authorization_Windows();
-            //f1.ShowDialog();
+        private void Go_To_Pc_Button_Click(object sender, EventArgs e)
+        {
+            Personal_Cabinet_Window f1 = new Personal_Cabinet_Window();
+            f1.ShowDialog();
+            this.Close();
         }
     }
 }
