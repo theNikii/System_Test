@@ -39,6 +39,7 @@
             this.Delete_Button = new System.Windows.Forms.Button();
             this.Change_Button = new System.Windows.Forms.Button();
             this.Change_OKPD2_Button = new System.Windows.Forms.Button();
+            this.Change_Characteristic_Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Item_Data_Window)).BeginInit();
             this.SuspendLayout();
             // 
@@ -171,11 +172,24 @@
             this.Change_OKPD2_Button.UseVisualStyleBackColor = false;
             this.Change_OKPD2_Button.Click += new System.EventHandler(this.Change_OKPD2_Button_Click);
             // 
+            // Change_Characteristic_Button
+            // 
+            this.Change_Characteristic_Button.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Change_Characteristic_Button.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Change_Characteristic_Button.Location = new System.Drawing.Point(647, 651);
+            this.Change_Characteristic_Button.Name = "Change_Characteristic_Button";
+            this.Change_Characteristic_Button.Size = new System.Drawing.Size(152, 52);
+            this.Change_Characteristic_Button.TabIndex = 43;
+            this.Change_Characteristic_Button.Text = "Изменить Характеристики";
+            this.Change_Characteristic_Button.UseVisualStyleBackColor = false;
+            this.Change_Characteristic_Button.Click += new System.EventHandler(this.Change_Characteristic_Button_Click);
+            // 
             // Edit_Item
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 761);
+            this.Controls.Add(this.Change_Characteristic_Button);
             this.Controls.Add(this.Change_OKPD2_Button);
             this.Controls.Add(this.End_Edit_Button);
             this.Controls.Add(this.Insert_Button);
@@ -209,5 +223,6 @@
         private System.Windows.Forms.Button Delete_Button;
         private System.Windows.Forms.Button Change_Button;
         private System.Windows.Forms.Button Change_OKPD2_Button;
+        private System.Windows.Forms.Button Change_Characteristic_Button;
     }
 }

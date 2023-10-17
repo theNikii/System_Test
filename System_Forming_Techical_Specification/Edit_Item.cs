@@ -66,5 +66,12 @@ namespace System_Forming_Techical_Specification
             this.Close();
             f1.ShowDialog();
         }
+
+        private void Change_Characteristic_Button_Click(object sender, EventArgs e)
+        {
+            Edit_Characteristic f1 = new Edit_Characteristic();
+            this.Close();
+            f1.ShowDialog();
+        }
     }
 }

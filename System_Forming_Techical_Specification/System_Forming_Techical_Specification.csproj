@@ -64,6 +64,12 @@
     <Compile Include="Document_Window.Designer.cs">
       <DependentUpon>Document_Window.cs</DependentUpon>
     </Compile>
+    <Compile Include="Edit_Characteristic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Characteristic.Designer.cs">
+      <DependentUpon>Edit_Characteristic.cs</DependentUpon>
+    </Compile>
     <Compile Include="Edit_Document.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Document_Window.resx">
       <DependentUpon>Document_Window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Characteristic.resx">
+      <DependentUpon>Edit_Characteristic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Edit_Document.resx">
       <DependentUpon>Edit_Document.cs</DependentUpon>

@@ -78,6 +78,7 @@
             this.Name_Text.Size = new System.Drawing.Size(88, 21);
             this.Name_Text.TabIndex = 25;
             this.Name_Text.Text = "Название:";
+            this.Name_Text.Click += new System.EventHandler(this.Name_Text_Click);
             // 
             // Code_KTPY_String
             // 
@@ -96,6 +97,7 @@
             this.Name_Item_String.Name = "Name_Item_String";
             this.Name_Item_String.Size = new System.Drawing.Size(906, 31);
             this.Name_Item_String.TabIndex = 23;
+            this.Name_Item_String.TextChanged += new System.EventHandler(this.Name_Item_String_TextChanged);
             // 
             // Code_OKPD2_Text
             // 

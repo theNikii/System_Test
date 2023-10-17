@@ -29,5 +29,15 @@ namespace System_Forming_Techical_Specification
             this.Close();
             f1.ShowDialog();
         }
+
+        private void Name_Text_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Name_Item_String_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
