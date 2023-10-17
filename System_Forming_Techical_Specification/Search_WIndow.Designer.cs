@@ -216,6 +216,7 @@
             this.Searh_Button.TabIndex = 29;
             this.Searh_Button.Text = "Поиск";
             this.Searh_Button.UseVisualStyleBackColor = false;
+            this.Searh_Button.Click += new System.EventHandler(this.Searh_Button_Click);
             // 
             // Search_Item_String
             // 

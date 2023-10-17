@@ -158,6 +158,7 @@
             this.System_Info_Document_Button.TabIndex = 14;
             this.System_Info_Document_Button.Text = "Документ";
             this.System_Info_Document_Button.UseVisualStyleBackColor = false;
+            this.System_Info_Document_Button.Click += new System.EventHandler(this.System_Info_Document_Button_Click);
             // 
             // Termin_Info_Document_Button
             // 
@@ -169,6 +170,7 @@
             this.Termin_Info_Document_Button.TabIndex = 15;
             this.Termin_Info_Document_Button.Text = "Документ";
             this.Termin_Info_Document_Button.UseVisualStyleBackColor = false;
+            this.Termin_Info_Document_Button.Click += new System.EventHandler(this.Termin_Info_Document_Button_Click);
             // 
             // Search_System_Button
             // 

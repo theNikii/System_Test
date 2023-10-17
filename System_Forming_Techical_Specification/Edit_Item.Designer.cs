@@ -38,6 +38,7 @@
             this.Insert_Button = new System.Windows.Forms.Button();
             this.Delete_Button = new System.Windows.Forms.Button();
             this.Change_Button = new System.Windows.Forms.Button();
+            this.Change_OKPD2_Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Item_Data_Window)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,6 +86,7 @@
             this.Searh_Button.TabIndex = 30;
             this.Searh_Button.Text = "Поиск";
             this.Searh_Button.UseVisualStyleBackColor = false;
+            this.Searh_Button.Click += new System.EventHandler(this.Searh_Button_Click);
             // 
             // Clean_Item_String_Button
             // 
@@ -131,6 +133,7 @@
             this.Insert_Button.TabIndex = 40;
             this.Insert_Button.Text = "Добавить";
             this.Insert_Button.UseVisualStyleBackColor = false;
+            this.Insert_Button.Click += new System.EventHandler(this.Insert_Button_Click);
             // 
             // Delete_Button
             // 
@@ -142,6 +145,7 @@
             this.Delete_Button.TabIndex = 39;
             this.Delete_Button.Text = "Удалить";
             this.Delete_Button.UseVisualStyleBackColor = false;
+            this.Delete_Button.Click += new System.EventHandler(this.Delete_Button_Click);
             // 
             // Change_Button
             // 
@@ -153,12 +157,26 @@
             this.Change_Button.TabIndex = 38;
             this.Change_Button.Text = "Редактировать ";
             this.Change_Button.UseVisualStyleBackColor = false;
+            this.Change_Button.Click += new System.EventHandler(this.Change_Button_Click);
+            // 
+            // Change_OKPD2_Button
+            // 
+            this.Change_OKPD2_Button.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Change_OKPD2_Button.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Change_OKPD2_Button.Location = new System.Drawing.Point(489, 651);
+            this.Change_OKPD2_Button.Name = "Change_OKPD2_Button";
+            this.Change_OKPD2_Button.Size = new System.Drawing.Size(152, 52);
+            this.Change_OKPD2_Button.TabIndex = 42;
+            this.Change_OKPD2_Button.Text = "Изменить ОКПД2";
+            this.Change_OKPD2_Button.UseVisualStyleBackColor = false;
+            this.Change_OKPD2_Button.Click += new System.EventHandler(this.Change_OKPD2_Button_Click);
             // 
             // Edit_Item
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 761);
+            this.Controls.Add(this.Change_OKPD2_Button);
             this.Controls.Add(this.End_Edit_Button);
             this.Controls.Add(this.Insert_Button);
             this.Controls.Add(this.Delete_Button);
@@ -190,5 +208,6 @@
         private System.Windows.Forms.Button Insert_Button;
         private System.Windows.Forms.Button Delete_Button;
         private System.Windows.Forms.Button Change_Button;
+        private System.Windows.Forms.Button Change_OKPD2_Button;
     }
 }

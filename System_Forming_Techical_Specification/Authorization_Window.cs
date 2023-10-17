@@ -12,6 +12,18 @@ namespace System_Forming_Techical_Specification
 {
     public partial class Authorization_Window : Form
     {
+
+        void Check_Password_Accept_Func()
+        {
+            Descript_Password_Func();
+
+        }
+
+
+        void Descript_Password_Func()
+        {
+
+        }
         public Authorization_Window()
         {
             InitializeComponent();
@@ -29,12 +41,22 @@ namespace System_Forming_Techical_Specification
 
         private void Enter_To_System_Button_Click(object sender, EventArgs e)
         {
-            Personal_Cabinet_Window f1 = new Personal_Cabinet_Window();
-            f1.ShowDialog();
-            this.Close();
+            bool accept_password = false;
+            Check_Password_Accept_Func();
 
-            //Error_Authorization_Windows f1 = new Error_Authorization_Windows();
-            //f1.ShowDialog();
+            if(accept_password == false)
+            {
+                Error_Authorization_Window f2 = new Error_Authorization_Window();
+                this.Close();
+                f2.ShowDialog();
+            }
+            else
+            {
+                Personal_Cabinet_Window f1 = new Personal_Cabinet_Window();
+                this.Close();
+                f1.ShowDialog();
+            }
+            
         }
     }
 }

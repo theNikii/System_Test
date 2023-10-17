@@ -12,6 +12,21 @@ namespace System_Forming_Techical_Specification
 {
     public partial class Change_Password_Window : Form
     {
+
+        void Generate_Password_Func()
+        {
+
+        }
+
+        void Change_Password_Func()
+        {
+            Script_Password_Func();
+        }
+
+        void Script_Password_Func()
+        {
+
+        }
         public Change_Password_Window()
         {
             InitializeComponent();
@@ -44,9 +59,29 @@ namespace System_Forming_Techical_Specification
 
         private void Change_Password_Button_Click(object sender, EventArgs e)
         {
-            Personal_Cabinet_Window f1 = new Personal_Cabinet_Window();
-            f1.ShowDialog();
-            this.Close();
+            bool error_check = false;
+
+            Change_Password_Func();
+
+            if(error_check == true)
+            {
+                Change_Password_Window f2 = new Change_Password_Window();
+                this.Close();
+                f2.ShowDialog();
+            }
+            else
+            {
+                Personal_Cabinet_Window f1 = new Personal_Cabinet_Window();
+                this.Close();
+                f1.ShowDialog();
+            }
+         
+           
+        }
+
+        private void Generate_Password_Button_Click(object sender, EventArgs e)
+        {
+            Generate_Password_Func();
         }
     }
 }

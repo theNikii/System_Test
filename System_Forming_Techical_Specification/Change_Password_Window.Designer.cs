@@ -131,6 +131,7 @@
             this.Generate_Password_Button.TabIndex = 9;
             this.Generate_Password_Button.Text = "Сгенерировать ";
             this.Generate_Password_Button.UseVisualStyleBackColor = false;
+            this.Generate_Password_Button.Click += new System.EventHandler(this.Generate_Password_Button_Click);
             // 
             // Change_Password_Button
             // 

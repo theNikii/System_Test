@@ -10,26 +10,26 @@ using System.Windows.Forms;
 
 namespace System_Forming_Techical_Specification
 {
-    public partial class Edit_Document : Form
+    public partial class Edit_User : Form
     {
-        void Change_Document_Func()
+        void Change_User_Func()
         {
 
         }
-        public Edit_Document()
+        public Edit_User()
         {
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void Main_Info_Text_Click(object sender, EventArgs e)
         {
 
         }
 
         private void End_Edit_Button_Click(object sender, EventArgs e)
         {
-            Change_Document_Func();
-            Document_Window f1 = new Document_Window();
+            Change_User_Func();
+            Edit_Items f1 = new Edit_Items();
             this.Close();
             f1.ShowDialog();
         }

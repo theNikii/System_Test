@@ -12,6 +12,11 @@ namespace System_Forming_Techical_Specification
 {
     public partial class Document_Window : Form
     {
+        void Print_Document_Func()
+        {
+
+        }
+
         public Document_Window()
         {
             InitializeComponent();
@@ -20,43 +25,53 @@ namespace System_Forming_Techical_Specification
         private void Personal_Cabinet_Click(object sender, EventArgs e)
         {
             Personal_Cabinet_Window f1 = new Personal_Cabinet_Window();
-            f1.ShowDialog();
+         
             this.Close();
+            f1.ShowDialog();
         }
 
         private void Info_System_Button_Click(object sender, EventArgs e)
         {
             Info_About_System_Window f1 = new Info_About_System_Window();
-            f1.ShowDialog();
+     
             this.Close();
+            f1.ShowDialog();
         }
 
         private void Techi_Task_Button_Click(object sender, EventArgs e)
         {
             Technical_Specification_Window f1 = new Technical_Specification_Window();
-            f1.ShowDialog();
+           
             this.Close();
+            f1.ShowDialog();
         }
 
         private void Forming_Document_Button_Click(object sender, EventArgs e)
         {
             Document_Window f1 = new Document_Window();
-            f1.ShowDialog();
+            
             this.Close();
+            f1.ShowDialog();
         }
 
         private void Search_System_Button_Click(object sender, EventArgs e)
         {
             Search_WIndow f1 = new Search_WIndow();
-            f1.ShowDialog();
+         
             this.Close();
+            f1.ShowDialog();
         }
 
         private void Change_Document_Technical_Specification_Button_Click(object sender, EventArgs e)
         {
             Edit_Document f1 = new Edit_Document();
-            f1.ShowDialog();
             this.Close();
+            f1.ShowDialog();
+        }
+
+        private void Print_Document_Button_Click(object sender, EventArgs e)
+        {
+            Print_Document_Func();
         }
     }
 }

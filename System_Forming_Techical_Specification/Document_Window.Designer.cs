@@ -149,6 +149,7 @@
             this.Print_Document_Button.TabIndex = 16;
             this.Print_Document_Button.Text = "Перевод в электронный вид";
             this.Print_Document_Button.UseVisualStyleBackColor = false;
+            this.Print_Document_Button.Click += new System.EventHandler(this.Print_Document_Button_Click);
             // 
             // dataGridView1
             // 

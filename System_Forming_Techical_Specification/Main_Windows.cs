@@ -20,8 +20,9 @@ namespace System_Forming_Techical_Specification
          InitializeComponent();
 
          Authorization_Window f1 = new Authorization_Window();
-         f1.ShowDialog();
-         this.Close();
+            this.Close();
+            f1.ShowDialog();
+        // this.Close();
            
         }
 

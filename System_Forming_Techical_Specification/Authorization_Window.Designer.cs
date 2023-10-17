@@ -34,7 +34,6 @@
             this.Text_Login = new System.Windows.Forms.Label();
             this.Text_Password = new System.Windows.Forms.Label();
             this.Enter_To_System_Button = new System.Windows.Forms.Button();
-            this.Forget_Password_Button = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Text_Log_Pass
@@ -91,7 +90,7 @@
             this.Enter_To_System_Button.FlatAppearance.BorderSize = 2;
             this.Enter_To_System_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Enter_To_System_Button.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Enter_To_System_Button.Location = new System.Drawing.Point(84, 389);
+            this.Enter_To_System_Button.Location = new System.Drawing.Point(211, 387);
             this.Enter_To_System_Button.Name = "Enter_To_System_Button";
             this.Enter_To_System_Button.Size = new System.Drawing.Size(101, 42);
             this.Enter_To_System_Button.TabIndex = 11;
@@ -99,26 +98,12 @@
             this.Enter_To_System_Button.UseVisualStyleBackColor = false;
             this.Enter_To_System_Button.Click += new System.EventHandler(this.Enter_To_System_Button_Click);
             // 
-            // Forget_Password_Button
-            // 
-            this.Forget_Password_Button.BackColor = System.Drawing.SystemColors.Control;
-            this.Forget_Password_Button.FlatAppearance.BorderSize = 2;
-            this.Forget_Password_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Forget_Password_Button.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Forget_Password_Button.Location = new System.Drawing.Point(352, 389);
-            this.Forget_Password_Button.Name = "Forget_Password_Button";
-            this.Forget_Password_Button.Size = new System.Drawing.Size(101, 42);
-            this.Forget_Password_Button.TabIndex = 12;
-            this.Forget_Password_Button.Text = "Забыли пароль?";
-            this.Forget_Password_Button.UseVisualStyleBackColor = false;
-            // 
             // Authorization_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(584, 461);
-            this.Controls.Add(this.Forget_Password_Button);
             this.Controls.Add(this.Enter_To_System_Button);
             this.Controls.Add(this.Text_Password);
             this.Controls.Add(this.Text_Login);
@@ -142,6 +127,5 @@
         private System.Windows.Forms.Label Text_Login;
         private System.Windows.Forms.Label Text_Password;
         private System.Windows.Forms.Button Enter_To_System_Button;
-        private System.Windows.Forms.Button Forget_Password_Button;
     }
 }

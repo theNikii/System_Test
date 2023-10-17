@@ -76,11 +76,29 @@
     <Compile Include="Edit_Item.Designer.cs">
       <DependentUpon>Edit_Item.cs</DependentUpon>
     </Compile>
+    <Compile Include="Edit_Items.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Items.Designer.cs">
+      <DependentUpon>Edit_Items.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_OKPD2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_OKPD2.Designer.cs">
+      <DependentUpon>Edit_OKPD2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Edit_Technical_Specification.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Edit_Technical_Specification.Designer.cs">
       <DependentUpon>Edit_Technical_Specification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_User.Designer.cs">
+      <DependentUpon>Edit_User.cs</DependentUpon>
     </Compile>
     <Compile Include="Edit_Users.cs">
       <SubType>Form</SubType>
@@ -159,8 +177,17 @@
     <EmbeddedResource Include="Edit_Item.resx">
       <DependentUpon>Edit_Item.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Items.resx">
+      <DependentUpon>Edit_Items.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_OKPD2.resx">
+      <DependentUpon>Edit_OKPD2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Edit_Technical_Specification.resx">
       <DependentUpon>Edit_Technical_Specification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_User.resx">
+      <DependentUpon>Edit_User.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Edit_Users.resx">
       <DependentUpon>Edit_Users.cs</DependentUpon>

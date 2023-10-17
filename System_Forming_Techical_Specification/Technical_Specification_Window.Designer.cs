@@ -200,6 +200,7 @@
             this.Delete_Rows_Technical_Specification_Button.TabIndex = 20;
             this.Delete_Rows_Technical_Specification_Button.Text = "Удалить строку";
             this.Delete_Rows_Technical_Specification_Button.UseVisualStyleBackColor = false;
+            this.Delete_Rows_Technical_Specification_Button.Click += new System.EventHandler(this.Delete_Rows_Technical_Specification_Button_Click);
             // 
             // Technical_Specification_Window
             // 

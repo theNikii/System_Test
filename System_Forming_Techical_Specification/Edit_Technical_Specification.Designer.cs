@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.Main_Info_Text = new System.Windows.Forms.Label();
-            this.Number_Count_Text = new System.Windows.Forms.Label();
-            this.Number_Count__String = new System.Windows.Forms.TextBox();
             this.End_Edit_Button = new System.Windows.Forms.Button();
             this.Name_Numenclature_Text = new System.Windows.Forms.Label();
             this.Value_Characteristic_Text = new System.Windows.Forms.Label();
@@ -53,26 +51,6 @@
             this.Main_Info_Text.Size = new System.Drawing.Size(272, 31);
             this.Main_Info_Text.TabIndex = 1;
             this.Main_Info_Text.Text = "Техническое задание";
-            // 
-            // Number_Count_Text
-            // 
-            this.Number_Count_Text.AutoSize = true;
-            this.Number_Count_Text.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Number_Count_Text.Location = new System.Drawing.Point(43, 104);
-            this.Number_Count_Text.Name = "Number_Count_Text";
-            this.Number_Count_Text.Size = new System.Drawing.Size(187, 21);
-            this.Number_Count_Text.TabIndex = 11;
-            this.Number_Count_Text.Text = "Номер нуменклатуры:";
-            this.Number_Count_Text.Click += new System.EventHandler(this.Header_Text_Click);
-            // 
-            // Number_Count__String
-            // 
-            this.Number_Count__String.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Number_Count__String.Location = new System.Drawing.Point(47, 138);
-            this.Number_Count__String.Multiline = true;
-            this.Number_Count__String.Name = "Number_Count__String";
-            this.Number_Count__String.Size = new System.Drawing.Size(1404, 31);
-            this.Number_Count__String.TabIndex = 12;
             // 
             // End_Edit_Button
             // 
@@ -197,8 +175,6 @@
             this.Controls.Add(this.Value_Characteristic_Text);
             this.Controls.Add(this.Name_Numenclature_Text);
             this.Controls.Add(this.End_Edit_Button);
-            this.Controls.Add(this.Number_Count__String);
-            this.Controls.Add(this.Number_Count_Text);
             this.Controls.Add(this.Main_Info_Text);
             this.MaximumSize = new System.Drawing.Size(1500, 800);
             this.MinimumSize = new System.Drawing.Size(1500, 800);
@@ -212,8 +188,6 @@
         #endregion
 
         private System.Windows.Forms.Label Main_Info_Text;
-        private System.Windows.Forms.Label Number_Count_Text;
-        private System.Windows.Forms.TextBox Number_Count__String;
         private System.Windows.Forms.Button End_Edit_Button;
         private System.Windows.Forms.Label Name_Numenclature_Text;
         private System.Windows.Forms.Label Value_Characteristic_Text;

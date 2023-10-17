@@ -35,7 +35,6 @@
             this.Text_Password = new System.Windows.Forms.Label();
             this.Password_String = new System.Windows.Forms.TextBox();
             this.Enter_To_System_Button = new System.Windows.Forms.Button();
-            this.Forget_Password_Button = new System.Windows.Forms.Button();
             this.Text_Error_Info = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -74,14 +73,6 @@
             this.Enter_To_System_Button.UseVisualStyleBackColor = false;
             this.Enter_To_System_Button.Click += new System.EventHandler(this.Enter_To_System_Button_Click);
             // 
-            // Forget_Password_Button
-            // 
-            this.Forget_Password_Button.BackColor = System.Drawing.SystemColors.Control;
-            this.Forget_Password_Button.FlatAppearance.BorderSize = 2;
-            resources.ApplyResources(this.Forget_Password_Button, "Forget_Password_Button");
-            this.Forget_Password_Button.Name = "Forget_Password_Button";
-            this.Forget_Password_Button.UseVisualStyleBackColor = false;
-            // 
             // Text_Error_Info
             // 
             resources.ApplyResources(this.Text_Error_Info, "Text_Error_Info");
@@ -94,7 +85,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.Controls.Add(this.Text_Error_Info);
-            this.Controls.Add(this.Forget_Password_Button);
             this.Controls.Add(this.Enter_To_System_Button);
             this.Controls.Add(this.Password_String);
             this.Controls.Add(this.Text_Password);
@@ -115,7 +105,6 @@
         private System.Windows.Forms.Label Text_Password;
         private System.Windows.Forms.TextBox Password_String;
         private System.Windows.Forms.Button Enter_To_System_Button;
-        private System.Windows.Forms.Button Forget_Password_Button;
         private System.Windows.Forms.Label Text_Error_Info;
     }
 }

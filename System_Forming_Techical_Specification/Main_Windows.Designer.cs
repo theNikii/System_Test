@@ -34,18 +34,7 @@
             this.Techi_Task_Button = new System.Windows.Forms.Button();
             this.Forming_Document_Button = new System.Windows.Forms.Button();
             this.Main_Window_Info = new System.Windows.Forms.TextBox();
-            this.Text_Search_Item = new System.Windows.Forms.Label();
-            this.Search_Item_String = new System.Windows.Forms.TextBox();
-            this.Searh_Button = new System.Windows.Forms.Button();
-            this.Text_OKPD2 = new System.Windows.Forms.Label();
-            this.Text_KTRY = new System.Windows.Forms.Label();
-            this.Window_OKPD2 = new System.Windows.Forms.DataGridView();
-            this.Window_KTRY = new System.Windows.Forms.DataGridView();
-            this.Clean_Item_String_Button = new System.Windows.Forms.Button();
-            this.Go_To_Item_Button = new System.Windows.Forms.Button();
             this.Search_System_Button = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.Window_OKPD2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Window_KTRY)).BeginInit();
             this.SuspendLayout();
             // 
             // Pc_Window
@@ -123,116 +112,6 @@
             this.Main_Window_Info.TabIndex = 5;
             this.Main_Window_Info.TextChanged += new System.EventHandler(this.Main_Window_Info_TextChanged);
             // 
-            // Text_Search_Item
-            // 
-            this.Text_Search_Item.AutoSize = true;
-            this.Text_Search_Item.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Text_Search_Item.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Text_Search_Item.Location = new System.Drawing.Point(215, 75);
-            this.Text_Search_Item.Name = "Text_Search_Item";
-            this.Text_Search_Item.Size = new System.Drawing.Size(212, 22);
-            this.Text_Search_Item.TabIndex = 6;
-            this.Text_Search_Item.Text = "Поиск нуменкулатуры:";
-            this.Text_Search_Item.Click += new System.EventHandler(this.Text_Search_Item_Click);
-            // 
-            // Search_Item_String
-            // 
-            this.Search_Item_String.BackColor = System.Drawing.Color.White;
-            this.Search_Item_String.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Search_Item_String.Location = new System.Drawing.Point(219, 118);
-            this.Search_Item_String.Multiline = true;
-            this.Search_Item_String.Name = "Search_Item_String";
-            this.Search_Item_String.Size = new System.Drawing.Size(685, 38);
-            this.Search_Item_String.TabIndex = 7;
-            this.Search_Item_String.TextChanged += new System.EventHandler(this.Search_Item_String_TextChanged);
-            // 
-            // Searh_Button
-            // 
-            this.Searh_Button.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Searh_Button.FlatAppearance.BorderSize = 2;
-            this.Searh_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Searh_Button.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Searh_Button.Location = new System.Drawing.Point(1038, 118);
-            this.Searh_Button.Name = "Searh_Button";
-            this.Searh_Button.Size = new System.Drawing.Size(166, 38);
-            this.Searh_Button.TabIndex = 8;
-            this.Searh_Button.Text = "Поиск";
-            this.Searh_Button.UseVisualStyleBackColor = false;
-            this.Searh_Button.Click += new System.EventHandler(this.Searh_Button_Click);
-            // 
-            // Text_OKPD2
-            // 
-            this.Text_OKPD2.AutoSize = true;
-            this.Text_OKPD2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Text_OKPD2.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Text_OKPD2.Location = new System.Drawing.Point(403, 185);
-            this.Text_OKPD2.Name = "Text_OKPD2";
-            this.Text_OKPD2.Size = new System.Drawing.Size(81, 22);
-            this.Text_OKPD2.TabIndex = 9;
-            this.Text_OKPD2.Text = "ОКПД2:";
-            this.Text_OKPD2.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // Text_KTRY
-            // 
-            this.Text_KTRY.AutoSize = true;
-            this.Text_KTRY.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Text_KTRY.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Text_KTRY.Location = new System.Drawing.Point(1104, 185);
-            this.Text_KTRY.Name = "Text_KTRY";
-            this.Text_KTRY.Size = new System.Drawing.Size(67, 22);
-            this.Text_KTRY.TabIndex = 10;
-            this.Text_KTRY.Text = "КТРУ:";
-            this.Text_KTRY.Click += new System.EventHandler(this.Text_KTRY_Click);
-            // 
-            // Window_OKPD2
-            // 
-            this.Window_OKPD2.AllowUserToOrderColumns = true;
-            this.Window_OKPD2.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Window_OKPD2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Window_OKPD2.Location = new System.Drawing.Point(219, 210);
-            this.Window_OKPD2.Name = "Window_OKPD2";
-            this.Window_OKPD2.Size = new System.Drawing.Size(515, 434);
-            this.Window_OKPD2.TabIndex = 11;
-            this.Window_OKPD2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Window_OKPD2_CellContentClick);
-            // 
-            // Window_KTRY
-            // 
-            this.Window_KTRY.AllowUserToOrderColumns = true;
-            this.Window_KTRY.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Window_KTRY.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Window_KTRY.Location = new System.Drawing.Point(813, 210);
-            this.Window_KTRY.Name = "Window_KTRY";
-            this.Window_KTRY.Size = new System.Drawing.Size(629, 434);
-            this.Window_KTRY.TabIndex = 12;
-            this.Window_KTRY.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Window_KTRY_CellContentClick);
-            // 
-            // Clean_Item_String_Button
-            // 
-            this.Clean_Item_String_Button.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Clean_Item_String_Button.FlatAppearance.BorderSize = 2;
-            this.Clean_Item_String_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Clean_Item_String_Button.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Clean_Item_String_Button.Location = new System.Drawing.Point(1260, 118);
-            this.Clean_Item_String_Button.Name = "Clean_Item_String_Button";
-            this.Clean_Item_String_Button.Size = new System.Drawing.Size(166, 38);
-            this.Clean_Item_String_Button.TabIndex = 13;
-            this.Clean_Item_String_Button.Text = "Очистить";
-            this.Clean_Item_String_Button.UseVisualStyleBackColor = false;
-            this.Clean_Item_String_Button.Click += new System.EventHandler(this.Clean_Item_String_Button_Click);
-            // 
-            // Go_To_Item_Button
-            // 
-            this.Go_To_Item_Button.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Go_To_Item_Button.FlatAppearance.BorderSize = 2;
-            this.Go_To_Item_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Go_To_Item_Button.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Go_To_Item_Button.Location = new System.Drawing.Point(1226, 678);
-            this.Go_To_Item_Button.Name = "Go_To_Item_Button";
-            this.Go_To_Item_Button.Size = new System.Drawing.Size(216, 38);
-            this.Go_To_Item_Button.TabIndex = 14;
-            this.Go_To_Item_Button.Text = "Перейти к нуменкулатуре";
-            this.Go_To_Item_Button.UseVisualStyleBackColor = false;
-            // 
             // Search_System_Button
             // 
             this.Search_System_Button.BackColor = System.Drawing.SystemColors.Control;
@@ -254,15 +133,6 @@
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1484, 761);
             this.Controls.Add(this.Search_System_Button);
-            this.Controls.Add(this.Go_To_Item_Button);
-            this.Controls.Add(this.Clean_Item_String_Button);
-            this.Controls.Add(this.Window_KTRY);
-            this.Controls.Add(this.Window_OKPD2);
-            this.Controls.Add(this.Text_KTRY);
-            this.Controls.Add(this.Text_OKPD2);
-            this.Controls.Add(this.Searh_Button);
-            this.Controls.Add(this.Search_Item_String);
-            this.Controls.Add(this.Text_Search_Item);
             this.Controls.Add(this.Main_Window_Info);
             this.Controls.Add(this.Forming_Document_Button);
             this.Controls.Add(this.Techi_Task_Button);
@@ -274,8 +144,6 @@
             this.Name = "Main_Windows";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Main_Windows_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.Window_OKPD2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Window_KTRY)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,15 +157,6 @@
         private System.Windows.Forms.Button Techi_Task_Button;
         private System.Windows.Forms.Button Forming_Document_Button;
         private System.Windows.Forms.TextBox Main_Window_Info;
-        private System.Windows.Forms.Label Text_Search_Item;
-        private System.Windows.Forms.TextBox Search_Item_String;
-        private System.Windows.Forms.Button Searh_Button;
-        private System.Windows.Forms.Label Text_OKPD2;
-        private System.Windows.Forms.Label Text_KTRY;
-        private System.Windows.Forms.DataGridView Window_OKPD2;
-        private System.Windows.Forms.DataGridView Window_KTRY;
-        private System.Windows.Forms.Button Clean_Item_String_Button;
-        private System.Windows.Forms.Button Go_To_Item_Button;
         private System.Windows.Forms.Button Search_System_Button;
     }
 }

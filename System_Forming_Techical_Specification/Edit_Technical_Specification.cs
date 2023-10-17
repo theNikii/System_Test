@@ -12,21 +12,23 @@ namespace System_Forming_Techical_Specification
 {
     public partial class Edit_Technical_Specification : Form
     {
+        void Change_Technical_Specification()
+        {
+
+        }
         public Edit_Technical_Specification()
         {
             InitializeComponent();
         }
 
-        private void Header_Text_Click(object sender, EventArgs e)
-        {
-
-        }
-
+     
         private void End_Edit_Button_Click(object sender, EventArgs e)
         {
+            Change_Technical_Specification();
+
             Technical_Specification_Window f1 = new Technical_Specification_Window();
-            f1.ShowDialog();
             this.Close();
+            f1.ShowDialog();
         }
     }
 }

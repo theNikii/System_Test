@@ -58,6 +58,7 @@
             this.User_Window_Data.Name = "User_Window_Data";
             this.User_Window_Data.Size = new System.Drawing.Size(954, 555);
             this.User_Window_Data.TabIndex = 12;
+            this.User_Window_Data.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.User_Window_Data_CellContentClick);
             // 
             // Change_Button
             // 
@@ -69,6 +70,7 @@
             this.Change_Button.TabIndex = 21;
             this.Change_Button.Text = "Редактировать ";
             this.Change_Button.UseVisualStyleBackColor = false;
+            this.Change_Button.Click += new System.EventHandler(this.Change_Button_Click);
             // 
             // Delete_Button
             // 
@@ -80,6 +82,7 @@
             this.Delete_Button.TabIndex = 22;
             this.Delete_Button.Text = "Удалить";
             this.Delete_Button.UseVisualStyleBackColor = false;
+            this.Delete_Button.Click += new System.EventHandler(this.Delete_Button_Click);
             // 
             // Insert_Button
             // 
@@ -91,6 +94,7 @@
             this.Insert_Button.TabIndex = 23;
             this.Insert_Button.Text = "Добавить";
             this.Insert_Button.UseVisualStyleBackColor = false;
+            this.Insert_Button.Click += new System.EventHandler(this.Insert_Button_Click);
             // 
             // End_Edit_Button
             // 
