@@ -44,6 +44,8 @@
             this.Searh_Button = new System.Windows.Forms.Button();
             this.Search_Item_String = new System.Windows.Forms.TextBox();
             this.Text_Search_Item = new System.Windows.Forms.Label();
+            this.Role_User_String = new System.Windows.Forms.TextBox();
+            this.Name_User_String = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Window_KTRY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Window_OKPD2)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +57,7 @@
             this.Main_Window_Info.Name = "Main_Window_Info";
             this.Main_Window_Info.Size = new System.Drawing.Size(1286, 761);
             this.Main_Window_Info.TabIndex = 6;
+            this.Main_Window_Info.TextChanged += new System.EventHandler(this.Main_Window_Info_TextChanged);
             // 
             // Search_System_Button
             // 
@@ -239,11 +242,31 @@
             this.Text_Search_Item.TabIndex = 27;
             this.Text_Search_Item.Text = "Поиск нуменкулатуры:";
             // 
+            // Role_User_String
+            // 
+            this.Role_User_String.Location = new System.Drawing.Point(3, 114);
+            this.Role_User_String.Multiline = true;
+            this.Role_User_String.Name = "Role_User_String";
+            this.Role_User_String.Size = new System.Drawing.Size(163, 46);
+            this.Role_User_String.TabIndex = 37;
+            this.Role_User_String.TextChanged += new System.EventHandler(this.Role_User_String_TextChanged);
+            // 
+            // Name_User_String
+            // 
+            this.Name_User_String.Location = new System.Drawing.Point(2, 24);
+            this.Name_User_String.Multiline = true;
+            this.Name_User_String.Name = "Name_User_String";
+            this.Name_User_String.Size = new System.Drawing.Size(163, 46);
+            this.Name_User_String.TabIndex = 36;
+            this.Name_User_String.TextChanged += new System.EventHandler(this.Name_User_String_TextChanged);
+            // 
             // Search_WIndow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1484, 761);
+            this.Controls.Add(this.Role_User_String);
+            this.Controls.Add(this.Name_User_String);
             this.Controls.Add(this.Go_To_Item_Button);
             this.Controls.Add(this.Clean_Item_String_Button);
             this.Controls.Add(this.Window_KTRY);
@@ -289,5 +312,7 @@
         private System.Windows.Forms.Button Searh_Button;
         private System.Windows.Forms.TextBox Search_Item_String;
         private System.Windows.Forms.Label Text_Search_Item;
+        private System.Windows.Forms.TextBox Role_User_String;
+        private System.Windows.Forms.TextBox Name_User_String;
     }
 }

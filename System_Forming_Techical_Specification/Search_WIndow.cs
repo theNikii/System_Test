@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +18,25 @@ namespace System_Forming_Techical_Specification
         {
 
         }
+
+        void Perconal_Info_OutPut_Func()
+        {
+            NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;Database=System;User id=postgres;Password=Nikrus48;");
+
+            conn.Open();
+            string comText = "select user_name from \"User\" where user_login = 'test_Super_Admin'";
+            NpgsqlCommand comm = new NpgsqlCommand(comText, conn);
+            Name_User_String.Text = comm.ExecuteScalar().ToString();
+
+            string comText1 = "select user_role from \"User\" where user_login = 'test_Super_Admin'";
+            NpgsqlCommand comn = new NpgsqlCommand(comText1, conn);
+            Role_User_String.Text = comn.ExecuteScalar().ToString();
+        }
         public Search_WIndow()
         {
             InitializeComponent();
+
+            Perconal_Info_OutPut_Func();
         }
 
         private void Personal_Cabinet_Click(object sender, EventArgs e)
@@ -73,6 +90,21 @@ namespace System_Forming_Techical_Specification
         private void Searh_Button_Click(object sender, EventArgs e)
         {
             Search_Item_Func();
+        }
+
+        private void Main_Window_Info_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Name_User_String_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Role_User_String_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

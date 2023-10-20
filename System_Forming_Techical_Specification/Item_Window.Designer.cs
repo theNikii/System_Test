@@ -41,6 +41,8 @@
             this.Back_To_Search_Button = new System.Windows.Forms.Button();
             this.Item_String = new System.Windows.Forms.TextBox();
             this.Search_System_Button = new System.Windows.Forms.Button();
+            this.Role_User_String = new System.Windows.Forms.TextBox();
+            this.Name_User_String = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -74,6 +76,7 @@
             this.Main_Window_Info.Name = "Main_Window_Info";
             this.Main_Window_Info.Size = new System.Drawing.Size(1286, 761);
             this.Main_Window_Info.TabIndex = 6;
+            this.Main_Window_Info.TextChanged += new System.EventHandler(this.Main_Window_Info_TextChanged);
             // 
             // Forming_Document_Button
             // 
@@ -184,6 +187,8 @@
             this.Item_String.Name = "Item_String";
             this.Item_String.Size = new System.Drawing.Size(266, 38);
             this.Item_String.TabIndex = 17;
+            this.Item_String.Text = " ";
+            this.Item_String.TextChanged += new System.EventHandler(this.Item_String_TextChanged);
             // 
             // Search_System_Button
             // 
@@ -199,12 +204,32 @@
             this.Search_System_Button.UseVisualStyleBackColor = false;
             this.Search_System_Button.Click += new System.EventHandler(this.Search_System_Button_Click);
             // 
+            // Role_User_String
+            // 
+            this.Role_User_String.Location = new System.Drawing.Point(5, 109);
+            this.Role_User_String.Multiline = true;
+            this.Role_User_String.Name = "Role_User_String";
+            this.Role_User_String.Size = new System.Drawing.Size(163, 46);
+            this.Role_User_String.TabIndex = 27;
+            this.Role_User_String.TextChanged += new System.EventHandler(this.Role_User_String_TextChanged);
+            // 
+            // Name_User_String
+            // 
+            this.Name_User_String.Location = new System.Drawing.Point(4, 19);
+            this.Name_User_String.Multiline = true;
+            this.Name_User_String.Name = "Name_User_String";
+            this.Name_User_String.Size = new System.Drawing.Size(163, 46);
+            this.Name_User_String.TabIndex = 26;
+            this.Name_User_String.TextChanged += new System.EventHandler(this.Name_User_String_TextChanged);
+            // 
             // Item_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1484, 761);
+            this.Controls.Add(this.Role_User_String);
+            this.Controls.Add(this.Name_User_String);
             this.Controls.Add(this.Search_System_Button);
             this.Controls.Add(this.Item_String);
             this.Controls.Add(this.Back_To_Search_Button);
@@ -241,7 +266,9 @@
         private System.Windows.Forms.Label Info_Line_Charistic_Text;
         private System.Windows.Forms.Button Insert_To_Technical_Specification_Button;
         private System.Windows.Forms.Button Back_To_Search_Button;
-        private System.Windows.Forms.TextBox Item_String;
         private System.Windows.Forms.Button Search_System_Button;
+        private System.Windows.Forms.TextBox Item_String;
+        private System.Windows.Forms.TextBox Role_User_String;
+        private System.Windows.Forms.TextBox Name_User_String;
     }
 }

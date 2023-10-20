@@ -40,6 +40,8 @@
             this.System_Info_Document_Button = new System.Windows.Forms.Button();
             this.Termin_Info_Document_Button = new System.Windows.Forms.Button();
             this.Search_System_Button = new System.Windows.Forms.Button();
+            this.Role_User_String = new System.Windows.Forms.TextBox();
+            this.Name_User_String = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Pc_Window
@@ -50,6 +52,7 @@
             this.Pc_Window.Name = "Pc_Window";
             this.Pc_Window.Size = new System.Drawing.Size(167, 194);
             this.Pc_Window.TabIndex = 1;
+            this.Pc_Window.TextChanged += new System.EventHandler(this.Pc_Window_TextChanged);
             // 
             // Personal_Cabinet
             // 
@@ -186,12 +189,31 @@
             this.Search_System_Button.UseVisualStyleBackColor = false;
             this.Search_System_Button.Click += new System.EventHandler(this.Search_System_Button_Click);
             // 
+            // Role_User_String
+            // 
+            this.Role_User_String.Location = new System.Drawing.Point(6, 108);
+            this.Role_User_String.Multiline = true;
+            this.Role_User_String.Name = "Role_User_String";
+            this.Role_User_String.Size = new System.Drawing.Size(163, 46);
+            this.Role_User_String.TabIndex = 25;
+            // 
+            // Name_User_String
+            // 
+            this.Name_User_String.Location = new System.Drawing.Point(5, 18);
+            this.Name_User_String.Multiline = true;
+            this.Name_User_String.Name = "Name_User_String";
+            this.Name_User_String.Size = new System.Drawing.Size(163, 46);
+            this.Name_User_String.TabIndex = 24;
+            this.Name_User_String.TextChanged += new System.EventHandler(this.Name_User_String_TextChanged);
+            // 
             // Info_About_System_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1484, 761);
+            this.Controls.Add(this.Role_User_String);
+            this.Controls.Add(this.Name_User_String);
             this.Controls.Add(this.Search_System_Button);
             this.Controls.Add(this.Termin_Info_Document_Button);
             this.Controls.Add(this.System_Info_Document_Button);
@@ -227,5 +249,7 @@
         private System.Windows.Forms.Button System_Info_Document_Button;
         private System.Windows.Forms.Button Termin_Info_Document_Button;
         private System.Windows.Forms.Button Search_System_Button;
+        private System.Windows.Forms.TextBox Role_User_String;
+        private System.Windows.Forms.TextBox Name_User_String;
     }
 }

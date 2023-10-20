@@ -36,7 +36,6 @@
             this.Info_System_Button = new System.Windows.Forms.Button();
             this.Top_String_Text = new System.Windows.Forms.Label();
             this.Info_Line_User_Text = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Change_Password = new System.Windows.Forms.Button();
             this.Info_For_Enginer_Text = new System.Windows.Forms.Label();
             this.Info_For_Administrator_Text = new System.Windows.Forms.Label();
@@ -44,7 +43,8 @@
             this.Search_System_Button = new System.Windows.Forms.Button();
             this.Change_User_Button = new System.Windows.Forms.Button();
             this.Change_Iten_Button = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Name_User_String = new System.Windows.Forms.TextBox();
+            this.Role_User_String = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Pc_Window
@@ -143,17 +143,6 @@
             this.Info_Line_User_Text.TabIndex = 11;
             this.Info_Line_User_Text.Text = "Информация о пользователе:";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(231, 131);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1234, 219);
-            this.dataGridView1.TabIndex = 12;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
             // Change_Password
             // 
             this.Change_Password.BackColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -239,12 +228,30 @@
             this.Change_Iten_Button.UseVisualStyleBackColor = false;
             this.Change_Iten_Button.Click += new System.EventHandler(this.Change_Iten_Button_Click);
             // 
+            // Name_User_String
+            // 
+            this.Name_User_String.Location = new System.Drawing.Point(1, 14);
+            this.Name_User_String.Multiline = true;
+            this.Name_User_String.Name = "Name_User_String";
+            this.Name_User_String.Size = new System.Drawing.Size(163, 46);
+            this.Name_User_String.TabIndex = 22;
+            // 
+            // Role_User_String
+            // 
+            this.Role_User_String.Location = new System.Drawing.Point(2, 104);
+            this.Role_User_String.Multiline = true;
+            this.Role_User_String.Name = "Role_User_String";
+            this.Role_User_String.Size = new System.Drawing.Size(163, 46);
+            this.Role_User_String.TabIndex = 23;
+            // 
             // Personal_Cabinet_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1484, 761);
+            this.Controls.Add(this.Role_User_String);
+            this.Controls.Add(this.Name_User_String);
             this.Controls.Add(this.Change_Iten_Button);
             this.Controls.Add(this.Change_User_Button);
             this.Controls.Add(this.Search_System_Button);
@@ -252,7 +259,6 @@
             this.Controls.Add(this.Info_For_Administrator_Text);
             this.Controls.Add(this.Info_For_Enginer_Text);
             this.Controls.Add(this.Change_Password);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.Info_Line_User_Text);
             this.Controls.Add(this.Top_String_Text);
             this.Controls.Add(this.Forming_Document_Button);
@@ -265,7 +271,7 @@
             this.MinimumSize = new System.Drawing.Size(1500, 800);
             this.Name = "Personal_Cabinet_Window";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Personal_Cabinet_Window_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,7 +287,6 @@
         private System.Windows.Forms.Button Info_System_Button;
         private System.Windows.Forms.Label Top_String_Text;
         private System.Windows.Forms.Label Info_Line_User_Text;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button Change_Password;
         private System.Windows.Forms.Label Info_For_Enginer_Text;
         private System.Windows.Forms.Label Info_For_Administrator_Text;
@@ -289,5 +294,7 @@
         private System.Windows.Forms.Button Search_System_Button;
         private System.Windows.Forms.Button Change_User_Button;
         private System.Windows.Forms.Button Change_Iten_Button;
+        private System.Windows.Forms.TextBox Name_User_String;
+        private System.Windows.Forms.TextBox Role_User_String;
     }
 }

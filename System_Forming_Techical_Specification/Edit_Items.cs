@@ -25,7 +25,7 @@ namespace System_Forming_Techical_Specification
         private void End_Edit_Button_Click(object sender, EventArgs e)
         {
             Change_Items_Func();
-            Edit_Items f1 = new Edit_Items();
+            Edit_Item f1 = new Edit_Item();
             this.Close();
             f1.ShowDialog();
         }
