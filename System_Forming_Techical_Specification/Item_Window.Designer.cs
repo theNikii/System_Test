@@ -33,7 +33,6 @@
             this.Main_Window_Info = new System.Windows.Forms.TextBox();
             this.Forming_Document_Button = new System.Windows.Forms.Button();
             this.Techi_Task_Button = new System.Windows.Forms.Button();
-            this.Info_System_Button = new System.Windows.Forms.Button();
             this.Top_String_Text = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Info_Line_Charistic_Text = new System.Windows.Forms.Label();
@@ -43,6 +42,8 @@
             this.Search_System_Button = new System.Windows.Forms.Button();
             this.Role_User_String = new System.Windows.Forms.TextBox();
             this.Name_User_String = new System.Windows.Forms.TextBox();
+            this.Change_User_Button = new System.Windows.Forms.Button();
+            this.Change_Item_Button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,7 +62,7 @@
             this.Personal_Cabinet.FlatAppearance.BorderSize = 2;
             this.Personal_Cabinet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Personal_Cabinet.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Personal_Cabinet.Location = new System.Drawing.Point(2, 225);
+            this.Personal_Cabinet.Location = new System.Drawing.Point(1, 409);
             this.Personal_Cabinet.Name = "Personal_Cabinet";
             this.Personal_Cabinet.Size = new System.Drawing.Size(166, 40);
             this.Personal_Cabinet.TabIndex = 2;
@@ -84,7 +85,7 @@
             this.Forming_Document_Button.FlatAppearance.BorderSize = 2;
             this.Forming_Document_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Forming_Document_Button.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Forming_Document_Button.Location = new System.Drawing.Point(2, 409);
+            this.Forming_Document_Button.Location = new System.Drawing.Point(1, 326);
             this.Forming_Document_Button.Name = "Forming_Document_Button";
             this.Forming_Document_Button.Size = new System.Drawing.Size(166, 40);
             this.Forming_Document_Button.TabIndex = 9;
@@ -98,27 +99,13 @@
             this.Techi_Task_Button.FlatAppearance.BorderSize = 2;
             this.Techi_Task_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Techi_Task_Button.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Techi_Task_Button.Location = new System.Drawing.Point(1, 363);
+            this.Techi_Task_Button.Location = new System.Drawing.Point(2, 280);
             this.Techi_Task_Button.Name = "Techi_Task_Button";
             this.Techi_Task_Button.Size = new System.Drawing.Size(166, 40);
             this.Techi_Task_Button.TabIndex = 8;
             this.Techi_Task_Button.Text = "Техническое задание";
             this.Techi_Task_Button.UseVisualStyleBackColor = false;
             this.Techi_Task_Button.Click += new System.EventHandler(this.Techi_Task_Button_Click);
-            // 
-            // Info_System_Button
-            // 
-            this.Info_System_Button.BackColor = System.Drawing.SystemColors.Control;
-            this.Info_System_Button.FlatAppearance.BorderSize = 2;
-            this.Info_System_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Info_System_Button.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Info_System_Button.Location = new System.Drawing.Point(2, 317);
-            this.Info_System_Button.Name = "Info_System_Button";
-            this.Info_System_Button.Size = new System.Drawing.Size(166, 40);
-            this.Info_System_Button.TabIndex = 7;
-            this.Info_System_Button.Text = "Справочная система";
-            this.Info_System_Button.UseVisualStyleBackColor = false;
-            this.Info_System_Button.Click += new System.EventHandler(this.Info_System_Button_Click);
             // 
             // Top_String_Text
             // 
@@ -141,6 +128,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(1206, 357);
             this.dataGridView1.TabIndex = 13;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Info_Line_Charistic_Text
             // 
@@ -159,11 +147,11 @@
             // 
             this.Insert_To_Technical_Specification_Button.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Insert_To_Technical_Specification_Button.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Insert_To_Technical_Specification_Button.Location = new System.Drawing.Point(234, 550);
+            this.Insert_To_Technical_Specification_Button.Location = new System.Drawing.Point(1288, 550);
             this.Insert_To_Technical_Specification_Button.Name = "Insert_To_Technical_Specification_Button";
             this.Insert_To_Technical_Specification_Button.Size = new System.Drawing.Size(152, 52);
             this.Insert_To_Technical_Specification_Button.TabIndex = 15;
-            this.Insert_To_Technical_Specification_Button.Text = "Добавить в техническое задание";
+            this.Insert_To_Technical_Specification_Button.Text = "Сформировать техническое задание";
             this.Insert_To_Technical_Specification_Button.UseVisualStyleBackColor = false;
             this.Insert_To_Technical_Specification_Button.Click += new System.EventHandler(this.Insert_To_Technical_Specification_Button_Click);
             // 
@@ -171,7 +159,7 @@
             // 
             this.Back_To_Search_Button.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Back_To_Search_Button.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Back_To_Search_Button.Location = new System.Drawing.Point(1288, 550);
+            this.Back_To_Search_Button.Location = new System.Drawing.Point(234, 550);
             this.Back_To_Search_Button.Name = "Back_To_Search_Button";
             this.Back_To_Search_Button.Size = new System.Drawing.Size(152, 52);
             this.Back_To_Search_Button.TabIndex = 16;
@@ -196,7 +184,7 @@
             this.Search_System_Button.FlatAppearance.BorderSize = 2;
             this.Search_System_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Search_System_Button.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Search_System_Button.Location = new System.Drawing.Point(1, 271);
+            this.Search_System_Button.Location = new System.Drawing.Point(1, 234);
             this.Search_System_Button.Name = "Search_System_Button";
             this.Search_System_Button.Size = new System.Drawing.Size(166, 40);
             this.Search_System_Button.TabIndex = 18;
@@ -222,12 +210,40 @@
             this.Name_User_String.TabIndex = 26;
             this.Name_User_String.TextChanged += new System.EventHandler(this.Name_User_String_TextChanged);
             // 
+            // Change_User_Button
+            // 
+            this.Change_User_Button.BackColor = System.Drawing.SystemColors.Control;
+            this.Change_User_Button.FlatAppearance.BorderSize = 2;
+            this.Change_User_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Change_User_Button.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Change_User_Button.Location = new System.Drawing.Point(1, 506);
+            this.Change_User_Button.Name = "Change_User_Button";
+            this.Change_User_Button.Size = new System.Drawing.Size(166, 45);
+            this.Change_User_Button.TabIndex = 41;
+            this.Change_User_Button.Text = "Редактирование пользователей";
+            this.Change_User_Button.UseVisualStyleBackColor = false;
+            // 
+            // Change_Item_Button
+            // 
+            this.Change_Item_Button.BackColor = System.Drawing.SystemColors.Control;
+            this.Change_Item_Button.FlatAppearance.BorderSize = 2;
+            this.Change_Item_Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Change_Item_Button.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Change_Item_Button.Location = new System.Drawing.Point(1, 455);
+            this.Change_Item_Button.Name = "Change_Item_Button";
+            this.Change_Item_Button.Size = new System.Drawing.Size(166, 45);
+            this.Change_Item_Button.TabIndex = 40;
+            this.Change_Item_Button.Text = "Редактирование нуменклатуры";
+            this.Change_Item_Button.UseVisualStyleBackColor = false;
+            // 
             // Item_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1484, 761);
+            this.Controls.Add(this.Change_User_Button);
+            this.Controls.Add(this.Change_Item_Button);
             this.Controls.Add(this.Role_User_String);
             this.Controls.Add(this.Name_User_String);
             this.Controls.Add(this.Search_System_Button);
@@ -239,7 +255,6 @@
             this.Controls.Add(this.Top_String_Text);
             this.Controls.Add(this.Forming_Document_Button);
             this.Controls.Add(this.Techi_Task_Button);
-            this.Controls.Add(this.Info_System_Button);
             this.Controls.Add(this.Main_Window_Info);
             this.Controls.Add(this.Personal_Cabinet);
             this.Controls.Add(this.Pc_Window);
@@ -247,6 +262,7 @@
             this.MinimumSize = new System.Drawing.Size(1500, 800);
             this.Name = "Item_Window";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.Item_Window_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -260,7 +276,6 @@
         private System.Windows.Forms.TextBox Main_Window_Info;
         private System.Windows.Forms.Button Forming_Document_Button;
         private System.Windows.Forms.Button Techi_Task_Button;
-        private System.Windows.Forms.Button Info_System_Button;
         private System.Windows.Forms.Label Top_String_Text;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label Info_Line_Charistic_Text;
@@ -270,5 +285,7 @@
         private System.Windows.Forms.TextBox Item_String;
         private System.Windows.Forms.TextBox Role_User_String;
         private System.Windows.Forms.TextBox Name_User_String;
+        private System.Windows.Forms.Button Change_User_Button;
+        private System.Windows.Forms.Button Change_Item_Button;
     }
 }

@@ -45,11 +45,11 @@ namespace System_Forming_Techical_Specification
             NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;Database=System;User id=postgres;Password=Nikrus48;");
 
             conn.Open();
-            string comText = "select user_name from \"User\" where user_login = 'test_Super_Admin'";
+            string comText = "select user_name from \"User\" where user_login = 'admin'";
             NpgsqlCommand comm = new NpgsqlCommand(comText, conn);
             Name_User_String.Text = comm.ExecuteScalar().ToString();
 
-            string comText1 = "select user_role from \"User\" where user_login = 'test_Super_Admin'";
+            string comText1 = "select user_role from \"User\" where user_login = 'admin'";
             NpgsqlCommand comn = new NpgsqlCommand(comText1, conn);
             Role_User_String.Text = comn.ExecuteScalar().ToString();
         }
@@ -86,14 +86,7 @@ namespace System_Forming_Techical_Specification
 
         }
 
-        private void Info_System_Button_Click(object sender, EventArgs e)
-        {
-            Info_About_System_Window f1 = new Info_About_System_Window();
-            
-            this.Close();
-            f1.ShowDialog();
-        }
-
+      
         private void Techi_Task_Button_Click(object sender, EventArgs e)
         {
             Technical_Specification_Window f1 = new Technical_Specification_Window();
@@ -118,19 +111,11 @@ namespace System_Forming_Techical_Specification
             f1.ShowDialog();
         }
 
-        private void Change_Technical_Specification_Button_Click(object sender, EventArgs e)
-        {
-            Edit_Technical_Specification f1 = new Edit_Technical_Specification();
-           
-            this.Close();
-            f1.ShowDialog();
-        }
+      
 
         private void Send_Info_To_Document_Click(object sender, EventArgs e)
         {
-            Edit_Document f1 = new Edit_Document();
-            this.Close();
-            f1.ShowDialog();
+           
         }
 
         private void Delete_Rows_Technical_Specification_Button_Click(object sender, EventArgs e)

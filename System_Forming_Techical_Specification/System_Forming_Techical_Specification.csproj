@@ -24,6 +24,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -112,71 +113,11 @@
     <Compile Include="Document_Window.Designer.cs">
       <DependentUpon>Document_Window.cs</DependentUpon>
     </Compile>
-    <Compile Include="Edit_Characteristic.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit_Characteristic.Designer.cs">
-      <DependentUpon>Edit_Characteristic.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit_Document.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit_Document.Designer.cs">
-      <DependentUpon>Edit_Document.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit_Item.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit_Item.Designer.cs">
-      <DependentUpon>Edit_Item.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit_Items.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit_Items.Designer.cs">
-      <DependentUpon>Edit_Items.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit_OKPD2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit_OKPD2.Designer.cs">
-      <DependentUpon>Edit_OKPD2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit_Technical_Specification.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit_Technical_Specification.Designer.cs">
-      <DependentUpon>Edit_Technical_Specification.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit_User.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit_User.Designer.cs">
-      <DependentUpon>Edit_User.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit_Users.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit_Users.Designer.cs">
-      <DependentUpon>Edit_Users.cs</DependentUpon>
-    </Compile>
     <Compile Include="Error_Authorization_Window.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Error_Authorization_Window.Designer.cs">
       <DependentUpon>Error_Authorization_Window.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Error_Reset_Password.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Error_Reset_Password.Designer.cs">
-      <DependentUpon>Error_Reset_Password.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Info_About_System_Window.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Info_About_System_Window.Designer.cs">
-      <DependentUpon>Info_About_System_Window.cs</DependentUpon>
     </Compile>
     <Compile Include="Item_Window.cs">
       <SubType>Form</SubType>
@@ -198,12 +139,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reset_Password.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reset_Password.Designer.cs">
-      <DependentUpon>Reset_Password.cs</DependentUpon>
-    </Compile>
     <Compile Include="Search_WIndow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,38 +160,8 @@
     <EmbeddedResource Include="Document_Window.resx">
       <DependentUpon>Document_Window.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Edit_Characteristic.resx">
-      <DependentUpon>Edit_Characteristic.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit_Document.resx">
-      <DependentUpon>Edit_Document.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit_Item.resx">
-      <DependentUpon>Edit_Item.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit_Items.resx">
-      <DependentUpon>Edit_Items.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit_OKPD2.resx">
-      <DependentUpon>Edit_OKPD2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit_Technical_Specification.resx">
-      <DependentUpon>Edit_Technical_Specification.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit_User.resx">
-      <DependentUpon>Edit_User.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit_Users.resx">
-      <DependentUpon>Edit_Users.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Error_Authorization_Window.resx">
       <DependentUpon>Error_Authorization_Window.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Error_Reset_Password.resx">
-      <DependentUpon>Error_Reset_Password.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Info_About_System_Window.resx">
-      <DependentUpon>Info_About_System_Window.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Item_Window.resx">
       <DependentUpon>Item_Window.cs</DependentUpon>
@@ -276,9 +181,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Reset_Password.resx">
-      <DependentUpon>Reset_Password.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Search_WIndow.resx">
       <DependentUpon>Search_WIndow.cs</DependentUpon>
     </EmbeddedResource>
