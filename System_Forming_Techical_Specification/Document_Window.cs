@@ -13,35 +13,7 @@ namespace System_Forming_Techical_Specification
 {
     public partial class Document_Window : Form
     {
-        void Table_Output_Func()
-        {
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-
-            NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;Database=System;User id=postgres;Password=Nikrus48;");
-            conn.Open();
-            NpgsqlCommand comm = new NpgsqlCommand();
-            comm.Connection = conn;
-            comm.CommandType = CommandType.Text;
-            comm.CommandText = "select document_header as \"Заголовок\", document_customer  as \"Заказчик \"," +
-               " document_finance as \" Источник финансирования \", document_place as \"Место доставки товаров\", " +
-               "document_time as \"Сроки поставок товаров\"," +
-               "document_start_price as \"Максимальная цена договора\", document_info_price as \" Сведение о включенных в цену товара расходах\"," +
-               "document_time_term_price as \"Срок и условия оплаты товаров\",document_info_application as \"требования обеспечения заявки\"," +
-               "document_info_contract as \"Требования обеспечения контракта\" from document";
-
-            NpgsqlDataReader dr = comm.ExecuteReader();
-            if (dr.HasRows)
-            {
-                System.Data.DataTable dt = new System.Data.DataTable();
-                dt.Load(dr);
-                dataGridView1.DataSource = dt;
-            }
-            comm.Dispose();
-            conn.Close();
-        }
-
+       
         void Perconal_Info_OutPut_Func()
         {
             NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;Database=System;User id=postgres;Password=Nikrus48;");
@@ -64,7 +36,6 @@ namespace System_Forming_Techical_Specification
         public Document_Window()
         {
             InitializeComponent();
-            Table_Output_Func();
             Perconal_Info_OutPut_Func();
 
         }
@@ -127,6 +98,35 @@ namespace System_Forming_Techical_Specification
         private void Role_User_String_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Document_Window_Load(object sender, EventArgs e)
+        {
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;Database=System;User id=postgres;Password=Nikrus48;");
+            conn.Open();
+            NpgsqlCommand comm = new NpgsqlCommand();
+            comm.Connection = conn;
+            comm.CommandType = CommandType.Text;
+            comm.CommandText = "select doc_header as \"Заголовок\", doc_customer  as \"Заказчик \"," +
+               " doc_finance as \" Источник финансирования \", doc_place as \"Место доставки товаров\", " +
+               "doc_time as \"Сроки поставок товаров\"," +
+               "doc_start_price as \"Максимальная цена договора\", doc_info_price as \" Сведение о включенных в цену товара расходах\"," +
+               "doc_time_term_price as \"Срок и условия оплаты товаров\",doc_info_application as \"требования обеспечения заявки\"," +
+               "doc_info_contract as \"Требования обеспечения контракта\" from document where doc_id = 0";
+
+            NpgsqlDataReader dr = comm.ExecuteReader();
+            if (dr.HasRows)
+            {
+                System.Data.DataTable dt = new System.Data.DataTable();
+                dt.Load(dr);
+                dataGridView1.DataSource = dt;
+            }
+            comm.Dispose();
+            conn.Close();
         }
     }
 }

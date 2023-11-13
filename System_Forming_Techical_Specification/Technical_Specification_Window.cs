@@ -8,37 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Npgsql;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace System_Forming_Techical_Specification
 {
     public partial class Technical_Specification_Window : Form
     {
+        public string Item_names = string.Empty;
 
-        void Table_Output_Func()
-        {
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-
-            NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;Database=System;User id=postgres;Password=Nikrus48;");
-            conn.Open();
-            NpgsqlCommand comm = new NpgsqlCommand();
-            comm.Connection = conn;
-            comm.CommandType = CommandType.Text;
-            comm.CommandText = "select technical_specification_name_nu as \"Наименование товара\", technical_specification_value_c as \"Наименование характеристик\"," +
-                " technical_specification_unit_ch as \"Единица измерения\", technical_specification_count as \"Количество\"," +
-                " technical_specification_price as \"Цена за ед. товара\" from technical_specification";
-
-            NpgsqlDataReader dr = comm.ExecuteReader();
-            if (dr.HasRows)
-            {
-                System.Data.DataTable dt = new System.Data.DataTable();
-                dt.Load(dr);
-                dataGridView1.DataSource = dt;
-            }
-            comm.Dispose();
-            conn.Close();
-        }
+        public string Item_characteristic  = string.Empty;
+       
+        
 
         void Perconal_Info_OutPut_Func()
         {
@@ -54,14 +34,11 @@ namespace System_Forming_Techical_Specification
             Role_User_String.Text = comn.ExecuteScalar().ToString();
         }
 
-        void Delete_Row_Func()
-        {
-
-        }
+      
         public Technical_Specification_Window()
         {
             InitializeComponent();
-            Table_Output_Func();
+        
 
             Perconal_Info_OutPut_Func();   
      
@@ -118,10 +95,7 @@ namespace System_Forming_Techical_Specification
            
         }
 
-        private void Delete_Rows_Technical_Specification_Button_Click(object sender, EventArgs e)
-        {
-            Delete_Row_Func();
-        }
+       
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -140,6 +114,52 @@ namespace System_Forming_Techical_Specification
 
         private void Role_User_String_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void Technical_Specification_Window_Load(object sender, EventArgs e)
+        {
+
+            //here
+           
+            NpgsqlConnection conn2 = new NpgsqlConnection("Server=localhost;Port=5432;Database=System;User id=postgres;Password=Nikrus48;");
+            conn2.Open();
+            NpgsqlCommand comm2 = new NpgsqlCommand();
+            comm2.Connection = conn2;
+            comm2.CommandType = CommandType.Text;
+            comm2.CommandText = "Update technical_specification SET tech_spec_name_item = @_search , tech_spec_value_char = @_search1 where tech_spec_id = 0";
+            comm2.Parameters.AddWithValue("_search", Item_names);
+            comm2.Parameters.AddWithValue("_search1", Item_characteristic);
+            comm2.ExecuteNonQuery();
+            //Item_names
+            //Item_characteristic
+            conn2.Close();
+
+
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+
+            NpgsqlConnection conn = new NpgsqlConnection("Server=localhost;Port=5432;Database=System;User id=postgres;Password=Nikrus48;");
+            conn.Open();
+            NpgsqlCommand comm = new NpgsqlCommand();
+            comm.Connection = conn;
+            comm.CommandType = CommandType.Text;
+            comm.CommandText = "select tech_spec_name_item as \"Наименование товара\", tech_spec_value_char as \"Наименование характеристик\"," +
+                " tech_spec_unit_char as \"Единица измерения\", tech_spec_count as \"Количество\"," +
+                " tech_spec_price as \"Цена за ед. товара\" from technical_specification where tech_spec_id = 0";
+
+            NpgsqlDataReader dr = comm.ExecuteReader();
+            if (dr.HasRows)
+            {
+                System.Data.DataTable dt = new System.Data.DataTable();
+                dt.Load(dr);
+                dataGridView1.DataSource = dt;
+            }
+            comm.Dispose();
+            conn.Close();
+
+
 
         }
     }

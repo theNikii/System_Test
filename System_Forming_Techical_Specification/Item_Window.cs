@@ -1,4 +1,5 @@
 ﻿using Npgsql;
+using Npgsql.Internal;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -92,15 +93,38 @@ namespace System_Forming_Techical_Specification
         private void Insert_To_Technical_Specification_Button_Click(object sender, EventArgs e)
         {
 
+
+
+            string Test = string.Empty;
+            string Text_Char = string.Empty;
+            string Text_Char2 = string.Empty;
+
+            for (int i = 0; i < dataGridView1.RowCount-1; i++) 
+            {
+               
+                if ((bool)dataGridView1.Rows[i].Cells[1].Value == true) {
+                    Text_Char = dataGridView1.Rows[i].Cells[2].Value + "";
+                    Text_Char2 = dataGridView1.Rows[i].Cells[4].Value + " ";
+                    Test = Test + Text_Char + " - " + Text_Char2 + "\n ";
+                }
+
+            }
+            //MessageBox.Show(Test);
+
+
+           
+
             string x = Item_name;
-            string y = " ";
-            
-            
-            
-            Technical_Specification_Window f1 = new Technical_Specification_Window();
-            
-            this.Close();
-            f1.ShowDialog();
+            string y = Test;
+
+
+           
+             Technical_Specification_Window f1 = new Technical_Specification_Window();
+             
+             f1.Item_names = x;
+            f1.Item_characteristic = y;
+             this.Close();
+             f1.ShowDialog();
         }
 
         private void Back_To_Search_Button_Click(object sender, EventArgs e)
@@ -135,6 +159,7 @@ namespace System_Forming_Techical_Specification
         {
            Item_String.Text = Item_name;
 
+           
             int Nome_id;
             NpgsqlConnection conn2 = new NpgsqlConnection("Server=localhost;Port=5432;Database=System;User id=postgres;Password=Nikrus48;");
             conn2.Open();
@@ -144,12 +169,12 @@ namespace System_Forming_Techical_Specification
             //Select nomenclature_id_nomenclature from "nomenclature" Where ktru_code = '58.21.20.000-00000001' :_search 
             comm2.CommandText = "Select nomenclature_id from \"nomenclature\" Where ktru_code = :_search ";
             comm2.Parameters.AddWithValue("_search", Item_name_code_ktry);
-            Nome_id = Convert.ToInt32(comm2.ExecuteScalar().ToString());
+            //Nome_id = Convert.ToInt32(comm2.ExecuteScalar().ToString());
             Nome_id = ((int)comm2.ExecuteScalar());
             conn2.Close();
-            //Item_String.Text = Nome_id.ToString();
 
-
+           
+            
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
@@ -160,12 +185,6 @@ namespace System_Forming_Techical_Specification
             comm.Connection = conn;
             comm.CommandType = CommandType.Text;
 
-            /*SELECT characteristic.characteristic_name, characteristic.characteristic_value, 
-            characteristic.characteristic_unit,
-            characteristic.characteristic_into_technical_s FROM "characteristic"
-            LEFT JOIN "describe" ds ON ds.characteristic_id_characteristi = characteristic.characteristic_id_characteristi
-            LEFT JOIN nomenclature  ON nomenclature.nomenclature_id_nomenclature = ds.nomenclature_id_nomenclature
-            WHERE ds.nomenclature_id_nomenclature = 1;*/
             
             comm.CommandText = "select characteristic.characteristic_necessarily as \"Обязательность\",characteristic.characteristic_into_tech_spec as \"Добавить в тз\", " +
                 "" +
@@ -173,7 +192,7 @@ namespace System_Forming_Techical_Specification
                 "LEFT JOIN \"describe\" ds ON ds.characteristic_id = characteristic.characteristic_id " +
                 "LEFT JOIN nomenclature  ON nomenclature.nomenclature_id = ds.nomenclature_id" +
                 " WHERE ds.nomenclature_id = :_search" +
-                " ORDER By characteristic.characteristic_necessarily";
+                " ORDER By characteristic.characteristic_necessarily";//characteristic_necessarily
             comm.Parameters.AddWithValue("_search", Nome_id);
 
             NpgsqlDataReader dr = comm.ExecuteReader();

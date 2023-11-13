@@ -165,14 +165,8 @@ namespace System_Forming_Techical_Specification
 
         private void Window_OKPD2_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            // ОКПД в КТРУ
-           // string okpdtoktry = "";
+            
             string okpdtoktry = Window_OKPD2.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
-            // If DataGridView1.SelectedRows.Count<> 0 Then
-            //  Dim row As DataGridViewRow = DataGridView1.SelectedRows(0)
-            //  fName = row.Cells("fNameColumnName").Value
-            //   sName = row.Cells("sNameColumnName").Value
-            //   End If
 
             Window_KTRY.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             Window_KTRY.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -185,8 +179,7 @@ namespace System_Forming_Techical_Specification
             comm1.CommandType = CommandType.Text;
             comm1.CommandText = "select ktru.ktru_code as \"Код\", ktru.ktru_name  as \"Наименование \" from \"ktru\"  WHERE ktru.ocpd2_code = :_search ORDER BY ktru.ktru_name ";
             comm1.Parameters.AddWithValue("_search", okpdtoktry);
-            //Select * from "ktru" WHERE ktru.ocpd2_code = '58.21.20.000' ORDER BY ktru.ktru_name
-
+           
 
             NpgsqlDataReader dr1 = comm1.ExecuteReader();
             if (dr1.HasRows)
@@ -202,7 +195,6 @@ namespace System_Forming_Techical_Specification
 
         private void Window_KTRY_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            // Ктру в нуменклатуру
             string x = Window_KTRY.Rows[e.RowIndex].Cells[1].FormattedValue.ToString();
             string y = Window_KTRY.Rows[e.RowIndex].Cells[0].FormattedValue.ToString();
             Item_Window myForm = new Item_Window();
@@ -213,6 +205,11 @@ namespace System_Forming_Techical_Specification
         }
 
         private void Search_Item_String_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Search_WIndow_Load(object sender, EventArgs e)
         {
 
         }

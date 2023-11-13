@@ -290,6 +290,7 @@
             this.MinimumSize = new System.Drawing.Size(1500, 800);
             this.Name = "Search_WIndow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.Search_WIndow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Window_KTRY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Window_OKPD2)).EndInit();
             this.ResumeLayout(false);

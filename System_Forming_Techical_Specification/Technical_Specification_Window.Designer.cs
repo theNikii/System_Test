@@ -235,6 +235,7 @@
             this.MinimumSize = new System.Drawing.Size(1500, 800);
             this.Name = "Technical_Specification_Window";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.Technical_Specification_Window_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
