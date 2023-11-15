@@ -95,29 +95,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Authorization_Window.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Authorization_Window.Designer.cs">
-      <DependentUpon>Authorization_Window.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Change_Password_Window.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Change_Password_Window.Designer.cs">
-      <DependentUpon>Change_Password_Window.cs</DependentUpon>
-    </Compile>
     <Compile Include="Document_Window.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Document_Window.Designer.cs">
       <DependentUpon>Document_Window.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Error_Authorization_Window.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Error_Authorization_Window.Designer.cs">
-      <DependentUpon>Error_Authorization_Window.cs</DependentUpon>
     </Compile>
     <Compile Include="Item_Window.cs">
       <SubType>Form</SubType>
@@ -151,17 +133,8 @@
     <Compile Include="Technical_Specification_Window.Designer.cs">
       <DependentUpon>Technical_Specification_Window.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Authorization_Window.resx">
-      <DependentUpon>Authorization_Window.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Change_Password_Window.resx">
-      <DependentUpon>Change_Password_Window.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Document_Window.resx">
       <DependentUpon>Document_Window.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Error_Authorization_Window.resx">
-      <DependentUpon>Error_Authorization_Window.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Item_Window.resx">
       <DependentUpon>Item_Window.cs</DependentUpon>
@@ -200,6 +173,35 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('..\packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" />

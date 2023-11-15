@@ -42,6 +42,7 @@
             this.Name_User_String = new System.Windows.Forms.TextBox();
             this.Change_User_Button = new System.Windows.Forms.Button();
             this.Change_Item_Button = new System.Windows.Forms.Button();
+            this.Form_tech_spec = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,6 +54,7 @@
             this.Pc_Window.Name = "Pc_Window";
             this.Pc_Window.Size = new System.Drawing.Size(167, 194);
             this.Pc_Window.TabIndex = 1;
+            this.Pc_Window.TextChanged += new System.EventHandler(this.Pc_Window_TextChanged);
             // 
             // Personal_Cabinet
             // 
@@ -149,7 +151,7 @@
             this.Send_Info_To_Document.Name = "Send_Info_To_Document";
             this.Send_Info_To_Document.Size = new System.Drawing.Size(152, 52);
             this.Send_Info_To_Document.TabIndex = 18;
-            this.Send_Info_To_Document.Text = "Добавить информацию в документ";
+            this.Send_Info_To_Document.Text = "Перейти к созданию документа";
             this.Send_Info_To_Document.UseVisualStyleBackColor = false;
             this.Send_Info_To_Document.Click += new System.EventHandler(this.Send_Info_To_Document_Click);
             // 
@@ -211,12 +213,25 @@
             this.Change_Item_Button.Text = "Редактирование нуменклатуры";
             this.Change_Item_Button.UseVisualStyleBackColor = false;
             // 
+            // Form_tech_spec
+            // 
+            this.Form_tech_spec.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Form_tech_spec.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Form_tech_spec.Location = new System.Drawing.Point(1136, 578);
+            this.Form_tech_spec.Name = "Form_tech_spec";
+            this.Form_tech_spec.Size = new System.Drawing.Size(152, 52);
+            this.Form_tech_spec.TabIndex = 42;
+            this.Form_tech_spec.Text = "Сформировать";
+            this.Form_tech_spec.UseVisualStyleBackColor = false;
+            this.Form_tech_spec.Click += new System.EventHandler(this.Form_tech_spec_Click);
+            // 
             // Technical_Specification_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1484, 761);
+            this.Controls.Add(this.Form_tech_spec);
             this.Controls.Add(this.Change_User_Button);
             this.Controls.Add(this.Change_Item_Button);
             this.Controls.Add(this.Role_User_String);
@@ -258,5 +273,6 @@
         private System.Windows.Forms.TextBox Name_User_String;
         private System.Windows.Forms.Button Change_User_Button;
         private System.Windows.Forms.Button Change_Item_Button;
+        private System.Windows.Forms.Button Form_tech_spec;
     }
 }

@@ -83,14 +83,6 @@ namespace System_Forming_Techical_Specification
             f1.ShowDialog();
         }
 
-        private void Change_Password_Click(object sender, EventArgs e)
-        {
-            Change_Password_Window f1 = new Change_Password_Window();
-            
-            this.Close();
-            f1.ShowDialog();
-        }
-
        
 
        

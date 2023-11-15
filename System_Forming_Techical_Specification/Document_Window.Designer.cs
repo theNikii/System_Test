@@ -42,6 +42,8 @@
             this.Name_User_String = new System.Windows.Forms.TextBox();
             this.Change_User_Button = new System.Windows.Forms.Button();
             this.Change_Item_Button = new System.Windows.Forms.Button();
+            this.Form_doc = new System.Windows.Forms.Button();
+            this.Choose_tech_spec = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -209,12 +211,38 @@
             this.Change_Item_Button.Text = "Редактирование нуменклатуры";
             this.Change_Item_Button.UseVisualStyleBackColor = false;
             // 
+            // Form_doc
+            // 
+            this.Form_doc.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Form_doc.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Form_doc.Location = new System.Drawing.Point(1142, 592);
+            this.Form_doc.Name = "Form_doc";
+            this.Form_doc.Size = new System.Drawing.Size(152, 52);
+            this.Form_doc.TabIndex = 42;
+            this.Form_doc.Text = "Сформировать документ";
+            this.Form_doc.UseVisualStyleBackColor = false;
+            this.Form_doc.Click += new System.EventHandler(this.Form_doc_Click);
+            // 
+            // Choose_tech_spec
+            // 
+            this.Choose_tech_spec.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Choose_tech_spec.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Choose_tech_spec.Location = new System.Drawing.Point(984, 592);
+            this.Choose_tech_spec.Name = "Choose_tech_spec";
+            this.Choose_tech_spec.Size = new System.Drawing.Size(152, 52);
+            this.Choose_tech_spec.TabIndex = 43;
+            this.Choose_tech_spec.Text = "Выбрать тех задание";
+            this.Choose_tech_spec.UseVisualStyleBackColor = false;
+            this.Choose_tech_spec.Click += new System.EventHandler(this.Choose_tech_spec_Click);
+            // 
             // Document_Window
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(1484, 761);
+            this.Controls.Add(this.Choose_tech_spec);
+            this.Controls.Add(this.Form_doc);
             this.Controls.Add(this.Change_User_Button);
             this.Controls.Add(this.Change_Item_Button);
             this.Controls.Add(this.Role_User_String);
@@ -256,5 +284,7 @@
         private System.Windows.Forms.TextBox Name_User_String;
         private System.Windows.Forms.Button Change_User_Button;
         private System.Windows.Forms.Button Change_Item_Button;
+        private System.Windows.Forms.Button Form_doc;
+        private System.Windows.Forms.Button Choose_tech_spec;
     }
 }

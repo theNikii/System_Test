@@ -35,7 +35,6 @@
             this.Techi_Task_Button = new System.Windows.Forms.Button();
             this.Top_String_Text = new System.Windows.Forms.Label();
             this.Info_Line_User_Text = new System.Windows.Forms.Label();
-            this.Change_Password = new System.Windows.Forms.Button();
             this.Search_System_Button = new System.Windows.Forms.Button();
             this.Name_User_String = new System.Windows.Forms.TextBox();
             this.Role_User_String = new System.Windows.Forms.TextBox();
@@ -125,18 +124,6 @@
             this.Info_Line_User_Text.TabIndex = 11;
             this.Info_Line_User_Text.Text = "Информация о пользователе:";
             // 
-            // Change_Password
-            // 
-            this.Change_Password.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Change_Password.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Change_Password.Location = new System.Drawing.Point(231, 368);
-            this.Change_Password.Name = "Change_Password";
-            this.Change_Password.Size = new System.Drawing.Size(152, 52);
-            this.Change_Password.TabIndex = 13;
-            this.Change_Password.Text = "Изменить пароль";
-            this.Change_Password.UseVisualStyleBackColor = false;
-            this.Change_Password.Click += new System.EventHandler(this.Change_Password_Click);
-            // 
             // Search_System_Button
             // 
             this.Search_System_Button.BackColor = System.Drawing.SystemColors.Control;
@@ -204,7 +191,6 @@
             this.Controls.Add(this.Role_User_String);
             this.Controls.Add(this.Name_User_String);
             this.Controls.Add(this.Search_System_Button);
-            this.Controls.Add(this.Change_Password);
             this.Controls.Add(this.Info_Line_User_Text);
             this.Controls.Add(this.Top_String_Text);
             this.Controls.Add(this.Forming_Document_Button);
@@ -231,7 +217,6 @@
         private System.Windows.Forms.Button Techi_Task_Button;
         private System.Windows.Forms.Label Top_String_Text;
         private System.Windows.Forms.Label Info_Line_User_Text;
-        private System.Windows.Forms.Button Change_Password;
         private System.Windows.Forms.Button Search_System_Button;
         private System.Windows.Forms.TextBox Name_User_String;
         private System.Windows.Forms.TextBox Role_User_String;
